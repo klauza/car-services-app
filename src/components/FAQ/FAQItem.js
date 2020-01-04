@@ -6,7 +6,7 @@ const Wrapper = styled.li`
 `;
 const FAQItem = ({faq}) => {
   return (
-    <Wrapper key={faq.id}>
+    <Wrapper>
       {faq.content}
     </Wrapper>
   )

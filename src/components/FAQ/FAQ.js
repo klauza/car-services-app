@@ -24,7 +24,7 @@ const FAQ = () => {
 
       <ul>
         {faqDatabase.map(faq => 
-          <FAQItem faq={faq} />
+          <FAQItem key={faq.id} faq={faq} />
         )}
       </ul>
 

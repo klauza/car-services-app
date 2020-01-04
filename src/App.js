@@ -4,7 +4,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 // pages
 import Home from './components/Home/Home';
 import Services from './components/Services/Services';
-import FAQ from './components/Services/FAQ';
+import FAQ from './components/FAQ/FAQ';
 import Contact from './components/Contact/Contact';
 import Map from './components/Contact/Map';
 import Navigation from './components/Navigation/Navbar';
