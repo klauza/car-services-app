@@ -8,6 +8,7 @@ import FAQ from './components/FAQ/FAQ';
 import Contact from './components/Contact/Contact';
 import Map from './components/Contact/Map';
 import Navigation from './components/Navigation/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/frequently-asked-questions" component={FAQ} />
         <Route exact path="/map" component={Map} />
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }
