@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  height: 50vh;
+  width: 100%; height: 50vh;
   background: lightcoral;
   display: grid; place-items: center;
   .hero-split{  
                                                   border: 1px solid red;
-    width: 800px;
+    width: 100%;
     display: flex; flex-direction: row;
     align-self: center;
     justify-content: center;
@@ -31,7 +31,7 @@ const Wrapper = styled.div`
 `;
 const Hero = () => {
   return (
-    <Wrapper>
+    <Wrapper className="screen-width">
       <div className="hero-split">
 
         <div>

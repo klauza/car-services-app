@@ -5,11 +5,11 @@ import Parallax from './Parallax';
 
 const Home = () => {
   return (
-    <div className="screen-width">
+    <>
       <Hero />
       <Parallax />
       <About />
-    </div>
+    </>
   )
 }
 
