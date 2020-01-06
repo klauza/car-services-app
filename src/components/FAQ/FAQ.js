@@ -4,13 +4,23 @@ import { faqDatabase } from './FAQDatabase';
 import FAQItem from './FAQItem';
 
 const Wrapper = styled.div`
+  margin-top: 50px;
   h2{
     text-align: center;
+    color: #969B00;
+    margin: 25px 0;
+
+
   }
 
   ul{
-    width: 100%;
+    max-width: 1280px;
+    width: auto;
     margin: 0 auto;
+  padding-bottom: 100px;
+    @media(max-width: 768px){
+      margin: 0 15px;
+    }
   }
 `;
 
