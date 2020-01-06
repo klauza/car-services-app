@@ -1,1 +1,6 @@
+export { default as SpeechBubble } from './SpeechBubble'
+export { default as Map } from './Map'
+export { default as Home } from './Home'
 export { default as Check } from './Check'
+export { default as Tools } from './Tools'
+export { default as Help } from './Help'
