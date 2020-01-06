@@ -1,10 +1,22 @@
 import React, {useState} from 'react'
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { MobileView } from "react-device-detect";
 import MobileNavOpened from './MobileNavOpened';
+import MobileBottomNavigation from './MobileBottomNavigation';
+
+const Container = styled.div`
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  height: 50px;
+  width: 100%;
+  background: #363333;
+  color: #fff;
+  box-shadow: 0 2px 3px -1px rgba(0,0,0,.6);
+`;
 
 const Wrapper = styled.div`
+
   height: 50px;
   display: flex; flex-direction: row;
   justify-content: space-between;
@@ -110,20 +122,27 @@ const MobileNav = () => {
   // console.log(menuOpen);
   return (
     <MobileView>
-      <Wrapper isOpen={menuOpen}>
+      <Container>
 
-        <div className="mobile-logo">logo</div>
-        <div className="mobile-business-name"><h2>Business_name</h2></div>
-        <div className="mobile-hamburger" onClick={openMobileMenu}>
-          <div className={`menu-btn ${menuOpen ? 'burger-open' : null}`}>
-            <div className="menu-btn__burger"></div>
+        <Wrapper isOpen={menuOpen}>
+
+          <div className="mobile-logo">logo</div>
+          <div className="mobile-business-name"><h2>Business_name</h2></div>
+          <div className="mobile-hamburger" onTouchEnd={openMobileMenu}>
+            <div className={`menu-btn ${menuOpen ? 'burger-open' : null}`}>
+              <div className="menu-btn__burger"></div>
+            </div>
           </div>
-        </div>
 
-      </Wrapper>
+        </Wrapper>
 
-      { (menuOpen || closedModal) && ( <MobileNavOpened setMenuOpen={setMenuOpen} menuOpen={menuOpen} />) }
+      </Container>
 
+      {/* modal */}
+      { (menuOpen || closedModal) && ( <MobileNavOpened setMenuOpen={setMenuOpen} menuOpen={menuOpen} openMobileMenu={openMobileMenu} />) }
+
+      {/* bottom menu */}
+      <MobileBottomNavigation />
     </MobileView>
   )
 }

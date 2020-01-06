@@ -3,6 +3,13 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { BrowserView } from "react-device-detect";
 
+const Container = styled.div`
+  height: 50px;
+  width: 100%;
+  background: #363333;
+  color: #fff;
+  box-shadow: 0 2px 3px -1px rgba(0,0,0,.6);
+`;
 
 const BigScreenNav = styled.div`
   max-width: 1280px;
@@ -53,18 +60,20 @@ const BigScreenNav = styled.div`
 const ScreenNav = () => {
   return (
     <BrowserView>
-      <BigScreenNav>
-        <ul>
-          <li>Car Services</li>
-            <div className="big-screen-links">
-              <li><NavLink to="/">Home</NavLink></li>
-              <li><NavLink to="/services">Services</NavLink></li>
-              <li><NavLink to="/contact">Contact</NavLink></li>
-              <li className="big-screen-faq"><NavLink to="/frequently-asked-questions">FAQ</NavLink></li>
-            </div>
-          <li>fb</li>
-        </ul>
-      </BigScreenNav>
+      <Container>
+        <BigScreenNav>
+          <ul>
+            <li>Car Services</li>
+              <div className="big-screen-links">
+                <li><NavLink exact to="/">Home</NavLink></li>
+                <li><NavLink exact to="/services">Services</NavLink></li>
+                <li><NavLink exact to="/contact">Contact</NavLink></li>
+                <li className="big-screen-faq"><NavLink exact to="/frequently-asked-questions">FAQ</NavLink></li>
+              </div>
+            <li>fb</li>
+          </ul>
+        </BigScreenNav>
+      </Container>
     </BrowserView>
   )
 }
