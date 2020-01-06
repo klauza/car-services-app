@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import posed from 'react-pose';
+import { NavLink } from 'react-router-dom';
 
 // CONTAINER
 const MMenuPosed = posed.div({
@@ -13,7 +14,7 @@ const MMenuPosed = posed.div({
   }
 })
 const MMenu = styled(MMenuPosed)`
-border-top: 2px solid black;
+  border-top: 2px solid black;
   position: fixed;
   top: 50px; bottom: 0px; left: 0px; right: 0px;
   display: grid; place-items: center;
@@ -41,7 +42,7 @@ const Content = styled(ContentPosed)`
   color: black;
 `;
 
-const MobileNavOpened = ({menuOpen}) => {
+const MobileNavOpened = ({menuOpen, openMobileMenu}) => {
 
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -53,20 +54,14 @@ const MobileNavOpened = ({menuOpen}) => {
   if(!menuOpen && isOpen){
     setIsOpen(false);
   }
-  console.log('is menu open: ', menuOpen);
+
   return (
     <MMenu pose={isOpen ? "open" : "closed"}>
       <Content>
         
-        <li>li item-2</li>
-        <li>li item-3</li>
-        <li>li item-4</li>
-        <li>li item-5</li>
-        <li>li item-6</li>
-        <li>li item-7</li>
-        <li>li item-8</li>
-        <li>li item-9</li>
-        <li>li item-10</li>
+        <NavLink to="/" onTouchEnd={openMobileMenu}>Home</NavLink>
+        <NavLink to="/about" onTouchEnd={openMobileMenu}>About</NavLink>
+        <a href="/">Facebook</a>
         
       </Content>
     </MMenu>
