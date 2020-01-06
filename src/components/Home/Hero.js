@@ -9,12 +9,16 @@ const Wrapper = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  @media(max-width: 768px){
+    background-position: 50% 50%;
+  }
   .hero-box{  
     position: absolute;
     bottom: 20%; left: 50%;
     transform: translateX(-50%);
     display: flex; flex-direction: column;
-    width: 600px;
+    max-width: 600px;
+    width: auto;
 
     text-align: center;
     padding: 15px;
