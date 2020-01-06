@@ -1,25 +1,25 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import ScreenNav from './ScreenNav';
+import MobileNav from './MobileNav';
 
 const Wrapper = styled.div`
   height: 50px;
   width: 100%;
-  background: #000;
+  background: #363333;
   color: #fff;
   box-shadow: 0 2px 3px -1px rgba(0,0,0,.6);
+  
 `;
+
+
 const Navbar = () => {
   return (
     <Wrapper>
-      <ul>
-        <li><NavLink to="/">&#9776; Home</NavLink></li>
-        <li><NavLink to="/services">Services</NavLink></li>
-        <li><NavLink to="/contact">Contact</NavLink></li>
-        <li><NavLink to="/map">Map</NavLink></li>
-        <li><NavLink to="/frequently-asked-questions">FAQ</NavLink></li>
-      </ul>
-      nav
+
+      <ScreenNav />
+      <MobileNav />
+
     </Wrapper>
   )
 }
