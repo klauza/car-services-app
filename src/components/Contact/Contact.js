@@ -20,18 +20,47 @@ const Wrapper = styled.div`
       max-width: 1280px;
       width: auto;
       margin: 0 auto;
-      border: 1px solid black;
 
       display: grid; grid-template-columns: 1fr 1fr;
       align-content: center;
+      @media(max-width: 1280px){
+        margin: 0 15px;
+      }
+      @media(max-width: 768px){
+        img{
+          width: 100px; height: 100px;
+        }
+        grid-template-columns: 1fr;
+      }
+      @media(max-width: 400px){
+        img{
+          width: 75px; height: 75px;
+        }
+      }
     }
 
     &__options{
       width: 100%; height: 100%;
-      background: red;
+      background: rgba(0,0,0,.5);
+
       .flex-row-option{
         padding: 15px 5px;
         display: flex; flex-direction: row;
+        @media(max-width:768px){
+          display: grid; grid-template-columns: 1fr 1fr;
+          justify-content: space-around;
+        }
+        h2{
+          color: #969B00;
+        }
+        p{
+          color: #fff;
+        }
+        button{
+          margin-top: 5px;
+          width: 120px;
+          padding: 7.5px 5px;
+        }
         &__content{
           margin-left: 5px;
           display: grid;
@@ -43,7 +72,17 @@ const Wrapper = styled.div`
 
     &__desc{
       width: 100%; height: 100%;
-      background: white;
+      display: grid;
+      align-content: center;
+
+      &>div{
+        padding: 50px 15px;
+        background: rgba(0,0,0,.5);
+        p{
+          color: rgba(255,255,255,.75);
+          text-align: center;
+        }
+      }
     }
   }
 `;
@@ -81,7 +120,9 @@ const Contact = () => {
           </div>
 
           <div className="contact-container__desc">
-            2
+            <div>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat unde similique magni explicabo reiciendis ad, aut error? Sequi architecto quaerat numquam dignissimos maiores, tenetur dolores?</p>
+            </div>
           </div>
         </div>
       </div>
