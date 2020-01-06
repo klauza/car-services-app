@@ -19,9 +19,9 @@ const MMenu = styled(MMenuPosed)`
   position: fixed;
   top: 50px; bottom: 0px; left: 0px; right: 0px;
   z-index: 999;
-  background: #363333;
-`;
+  background: linear-gradient(to top, #000 0%, #363333 50%, #363333 100%);
 
+`;
 //CHILRETN
 const ContentPosed = posed.div({
   initialPose: 'closed',
