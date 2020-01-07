@@ -33,6 +33,9 @@ const BigScreenNav = styled.div`
         color: grey;
       }
     }
+    a.active{
+      color: grey;
+    }
     .big-screen-links{
       display: flex; flex-direction: row;
     }

@@ -21,7 +21,7 @@ function App() {
         <Route exact path="/frequently-asked-questions" component={FAQ} />
         <Route exact path="/map" component={Map} />
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }

@@ -15,7 +15,7 @@ const WrapperPosed = posed.div({
 const Wrapper = styled(WrapperPosed)`
   display: flex; flex-direction: column;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 150px;
   max-width: 1280px;
   width: 100%;
   /* height: 100vh; */
