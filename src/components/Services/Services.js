@@ -44,16 +44,16 @@ const Wrapper = styled(WrapperPosed)`
 
 
 const Example = styled.div`
-  width: 230px;
+  width: 320px;
   height: 55px;
   margin: 50px 0;
   position: relative;
 
   div{
-    animation: example-animation 2s infinite;
+    /* animation: example-animation 2s infinite; */
     width: 230px;
     height: 100%;
-    /* background: rgba(0,0,0,.65); */
+    background: rgba(0,0,0,.65);
     background: linear-gradient(to right, #000, rgba(0,0,0,.05) );
     /* inear-gradient(to bottom, #e66465, #9198e5); */
     position: absolute; top: 0px;
@@ -61,12 +61,13 @@ const Example = styled.div`
   }
   p{
     /* position: absolute; top: 0; */
+    margin-left: 90px;
     padding: 15px 5px;
     text-align: left;
     z-index: 3;
   }
 
-  @keyframes example-animation {
+  /* @keyframes example-animation {
     0%{
       opacity: 0;
       width: 0px;
@@ -80,7 +81,7 @@ const Example = styled.div`
     100%{
       width: 0px;
     }
-  }
+  } */
 `;
 
 const ServicesGallery = styled.div`
@@ -113,6 +114,7 @@ const ServicesGallery = styled.div`
       /* grid-column: 1 / 2; */
     }
     &-2{
+      grid-row: span 2;
       /* grid-row: 1 / 2; */
       /* grid-column: 2 / 4; */
     }
@@ -130,13 +132,13 @@ const ServicesGallery = styled.div`
       /* grid-column: 3 / 4; */
     }
     &-6{
-      grid-row: span 2;
-      grid-column: span 2;
+      /* grid-row: span 2; */
+      /* grid-column: span 2; */
       /* grid-row: 2 / 3; */
       /* grid-column: 4 / 5; */
     }
     &-7{
-      grid-row: span 2;
+      /* grid-row: span 2; */
       /* grid-row: 3 / 4; */
       /* grid-column: 3 / 5; */
     }
@@ -204,7 +206,7 @@ const Services = () => {
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, est.</p>
 
       <Example>
-        <p>See examples of our works</p>
+        <p>See examples of our work</p>
         <div></div>
       </Example>
 
