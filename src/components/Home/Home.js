@@ -24,7 +24,14 @@ const Home = () => {
   const [isOpen, setIsOpen] = React.useState(false); // modal open ? "animationStart" :"null"
 
   React.useEffect(()=>{
+    // fire enter animations
     setIsOpen(true);
+
+    // scroll Top every time we get to the page
+    window.scrollTo({  
+      top: 0,
+      behavior: 'auto'
+    })
   }, [])
 
   return (
