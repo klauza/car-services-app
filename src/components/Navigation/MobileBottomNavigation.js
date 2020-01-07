@@ -34,23 +34,41 @@ const Wrapper = styled.div`
         text-decoration: none;
         color: #fff;
 
+
         svg{
-          fill: rgba(255,255,255,.5);
+          /* fill: rgba(255,255,255,.5); */
+          fill: #fff;
+          opacity: .65;
           flex: 1;
           width: 25px;
           height: auto;
           display: block;
           margin: 3.5px auto 0;
+          transition: fill .5s ease;
         }
+        svg path, svg circle{
+          opacity: .65;
+          /* fill: rgba(255,255,255,.5); */
+        }
+        &.active svg{
+          opacity: 1;
+          transition: opacity .5s ease;
+          path, circle{
+              /* fill: #fff; */
+              opacity: 1;
+              transition: opacity .5s ease;
+            }
+        }
+
         span{
           margin-top: -15px;
           flex: 1;
+          transition: color .5s ease;
+          color: rgba(255,255,255,.65);
         }
-
-        &.active svg{
-          path, circle{
-              fill: #fff;
-            }
+        &.active span{
+          color: #fff;
+          transition: color .5s ease;
         }
       }
     }
