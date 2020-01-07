@@ -25,6 +25,7 @@ const BigScreenNav = styled.div`
       height: 100%;
     }
     a{
+      font-family: 'Oswald', sans-serif;
       padding: 0 15px;
       display: block;
       text-decoration: none;

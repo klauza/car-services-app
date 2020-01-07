@@ -33,7 +33,8 @@ const Wrapper = styled.div`
         line-height: 50px;
         text-decoration: none;
         color: #fff;
-
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: 1.25px;
 
         svg{
           /* fill: rgba(255,255,255,.5); */
