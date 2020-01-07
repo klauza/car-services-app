@@ -1,3 +1,4 @@
+export { default as HelpWebButton } from './HelpWebButton'
 export { default as SpeechBubble } from './SpeechBubble'
 export { default as Map } from './Map'
 export { default as Home } from './Home'

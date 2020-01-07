@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { HelpWebButton } from '../../Icons';
 
 const Wrapper = styled.li`
   background: #545454;
@@ -10,29 +11,44 @@ const Wrapper = styled.li`
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.5);
 
   display: flex; flex-direction: row;
+  @media(max-width: 768px){
+    flex-direction: column;
+  }
   .faq-image{
     flex: 1;
-    img{
+    svg{
+      width: 100px; 
+      height: 100px;
       margin: 5px;
-      width: 100px; height: 100px;
-      object-fit: cover;
+      filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+      circle, path{
+        fill: #969B00;
+      }
+
       @media(max-width: 768px){
-        width: 65px; height: 65px;
+        width: 65px;
+        height: 65px;
+        margin: 5px auto;
+        display: block;
       }
     }
+
+    
   }
   .faq-content{
     display: flex; flex-direction: column;
     justify-content: space-between;
     flex: 5;
 
+    @media(max-width: 768px){
+      margin: 5px 10px;
+    }
     &-top{
       position: relative;
       margin-bottom :15px;
       &::after{
         content:'';
-        /* position: absolute;
-        bottom: 0%; */
+
         margin-top: 15px;
         display: block;
         width: 70%; height: 1px;
@@ -48,7 +64,7 @@ const Wrapper = styled.li`
 const FAQItem = ({faq}) => {
   return (
     <Wrapper>
-      <div className="faq-image"><img src="http://placekitten.com/150/150" alt=""/></div>
+      <div className="faq-image"><HelpWebButton /></div>
       <div className="faq-content">
         <div className="faq-content-top">Q: {faq.q}</div>
         <div className="faq-content-bot">A: {faq.a}</div>
