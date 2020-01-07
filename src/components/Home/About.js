@@ -16,6 +16,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     border: 2px solid black;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.5);
     p{
       text-align: center;
     }

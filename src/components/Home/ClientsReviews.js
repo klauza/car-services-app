@@ -15,13 +15,14 @@ const Wrapper = styled.div`
   
   .client-review-container{
     border: 1px solid black;
-    max-width: 900px;
+    max-width: 768px;
     width: auto; height: auto;
     margin: 10px auto;
     padding: 5px;
     display: flex; flex-direction: row;
     align-items: center;
     text-align: left;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.75);
 
 
     p{
