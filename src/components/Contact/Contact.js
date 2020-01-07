@@ -74,10 +74,30 @@ const Wrapper = styled(WrapperPosed)`
           color: #fff;
         }
         button{
-          margin-top: 5px;
-          width: 120px;
-          padding: 7.5px 5px;
+          display: block;
+          width: 150px;
+          margin-top: 10px;
+          /* margin: 25px auto; */
+          cursor: pointer;
+          
+          border-radius: 5px;
+          border: 1px solid white;
+          background: #969B00;
+          transition: .5s all ease;
+          box-shadow: 0 3px 4px -1px rgba(0,0,0,.85);
+          padding: 7.5px 0px;
+          font-size: 1.05rem;
+          font-family: 'Oswald', sans-serif;
+          color: #fff;
+          text-shadow: 2px 2px 2px rgba(0,0,0,.5);
+          &:hover{
+            background: lightgrey;
+            color: #000; 
+            transition: .5s all ease;
+            border: 1px solid black;
+          }
         }
+
         &__content{
           margin-left: 5px;
           display: grid;
