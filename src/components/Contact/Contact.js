@@ -8,23 +8,30 @@ const Wrapper = styled.div`
   background-position: 50% 20%;
   background-size: cover;
   position: relative;
-
+  @media(max-width: 768px){
+    overflow-y: scroll;
+  }
   .contact-container{
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
+    max-width: 100%;
     width: 100%;
     height: auto;
-
+    /* padding: 100px 0; */
+    @media(max-width: 768px){
+      margin-top: 100px;
+      padding-bottom: 75px;
+    }
     .support-div{
       max-width: 1280px;
-      width: auto;
+      width: 100%;
       margin: 0 auto;
 
       display: grid; grid-template-columns: 1fr 1fr;
       align-content: center;
       @media(max-width: 1280px){
-        margin: 0 15px;
+        /* margin: 0 15px; */
       }
       @media(max-width: 768px){
         img{
@@ -121,7 +128,7 @@ const Contact = () => {
 
           <div className="contact-container__desc">
             <div>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat unde similique magni explicabo reiciendis ad, aut error? Sequi architecto quaerat numquam dignissimos maiores, tenetur dolores?</p>
+              <p>WE ARE OPEN 7 DAYS A WEEK 24H. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat unde similique magni explicabo reiciendis ad, aut error? Sequi architecto quaerat numquam dignissimos maiores, tenetur dolores?</p>
             </div>
           </div>
         </div>

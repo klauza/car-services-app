@@ -6,10 +6,17 @@ import FAQItem from './FAQItem';
 const Wrapper = styled.div`
   margin-top: 50px;
   h2{
+    display: block;
     text-align: center;
     color: #969B00;
     margin: 25px 0;
-
+    &::after{
+      content: '';
+      display: block;
+      width: 60%; margin: 15px auto 0;
+      height: 1px;
+      background: rgba(150,155,0,.35);
+    }
 
   }
 

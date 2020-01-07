@@ -10,7 +10,7 @@ const MMenuPosed = posed.div({
   open: {
     opacity: 1,
   },
-  closed: {  
+  closed: {    
     opacity: 0
   }
 })
@@ -28,7 +28,7 @@ const ContentPosed = posed.div({
   open: {
     y: 0,
     opacity: 1,
-    delayChildren: 500, 
+    delayChildren: 200, 
     staggerChildren: 50
   },
   closed: {     
@@ -40,16 +40,27 @@ const Content = styled(ContentPosed)`
   display: grid; 
   text-align: center;
   color: black;
-  .modal-image{
-      display: block;
-    img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+`;
+// MODAL IMAGE
+const ModalImagePose = posed.div({
+  open: { y: 0, opacity: 1 },
+  closed: { y: 20, opacity: 0 }
+})
+const ModalImage = styled(ModalImagePose)`
+  display: block;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
+`;
 
-  .modal-links{
+// NAV LINKS
+const ModalLinksPosed = posed.div({
+  open: { y: 0, opacity: 1 },
+  closed: { y: 50, opacity: 0 }
+})
+const ModalLinks = styled(ModalLinksPosed)`
     z-index: 2;
     width: 80%;
     margin: -30px auto 0;
@@ -80,8 +91,6 @@ const Content = styled(ContentPosed)`
       border: 1px solid grey;
     }
 
-  }
-
 `;
 
 const MobileNavOpened = ({menuOpen, openMobileMenu}) => {
@@ -100,14 +109,14 @@ const MobileNavOpened = ({menuOpen, openMobileMenu}) => {
   return (
     <MMenu pose={isOpen ? "open" : "closed"}>
       <Content>
-        <div className="modal-image"><img src={background} alt=""/></div>
+        <ModalImage><img src={background} alt=""/></ModalImage>
 
-        <div className="modal-links">
+        <ModalLinks>
           <NavLink to="/" onTouchEnd={openMobileMenu}>Home</NavLink>
           <NavLink to="/about" onTouchEnd={openMobileMenu}>About</NavLink>
           <a href="/">Facebook</a>
           <div></div>
-        </div>
+        </ModalLinks>
       </Content>
     </MMenu>
   )
