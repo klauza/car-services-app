@@ -1,8 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
+import posed from 'react-pose';
 import { contactBg } from '../../media';
 
-const Wrapper = styled.div`
+const WrapperPosed = posed.div({
+  initialPose: 'closed',
+  open: {
+    opacity: 1,
+  },
+  closed: {     
+    opacity: 0
+  }
+});
+const Wrapper = styled(WrapperPosed)`
   height: calc( 100vh - 50px );
   background: url( ${props => props.bg} ) no-repeat;
   background-position: 50% 20%;
@@ -95,8 +105,15 @@ const Wrapper = styled.div`
 `;
 
 const Contact = () => {
+
+  const [isOpen, setIsOpen] = React.useState(false); // modal open ? "animationStart" :"null"
+
+  React.useEffect(()=>{
+    setIsOpen(true);
+  }, [])
+
   return (
-    <Wrapper bg={contactBg}>
+    <Wrapper bg={contactBg} pose={isOpen ? "open" : "closed"}>
       <div className="contact-container">
         <div className="support-div">
           <div className="contact-container__options">

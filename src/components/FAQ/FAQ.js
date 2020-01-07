@@ -2,8 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import { faqDatabase } from './FAQDatabase';
 import FAQItem from './FAQItem';
+import posed from 'react-pose';
 
-const Wrapper = styled.div`
+const WrapperPosed = posed.div({
+  initialPose: 'closed',
+  open: {
+    opacity: 1,
+  },
+  closed: {     
+    opacity: 0
+  }
+});
+const Wrapper = styled(WrapperPosed)`
   margin-top: 50px;
   h2{
     display: block;
@@ -33,10 +43,15 @@ const Wrapper = styled.div`
 
 const FAQ = () => {
 
+  const [isOpen, setIsOpen] = React.useState(false); // modal open ? "animationStart" :"null"
+
+  React.useEffect(()=>{
+    setIsOpen(true);
+  }, [])
 
   
   return (
-    <Wrapper>
+    <Wrapper pose={isOpen ? "open" : "closed"}>
       <h2>Frequently Asked Questions</h2>
 
       <ul>

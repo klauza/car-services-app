@@ -1,8 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
+import posed from 'react-pose';
 import GalleryImage from './GalleryImage';
 
-const Wrapper = styled.div`
+const WrapperPosed = posed.div({
+  initialPose: 'closed',
+  open: {
+    opacity: 1,
+  },
+  closed: {     
+    opacity: 0
+  }
+});
+const Wrapper = styled(WrapperPosed)`
   display: flex; flex-direction: column;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -144,7 +154,11 @@ const Backdrop = styled.div`
 const Services = () => {
 
   const [showBackdrop, setShowBackdrop] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false); // modal open ? "animationStart" :"null"
 
+  React.useEffect(()=>{
+    setIsOpen(true);
+  }, [])
 
   const imgDb = [
     {
@@ -178,7 +192,7 @@ const Services = () => {
   ]
 
   return (
-    <Wrapper>
+    <Wrapper pose={isOpen ? "open" : "closed"}>
       <h2>Services</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, est.</p>
 
