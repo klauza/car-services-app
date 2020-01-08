@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import posed from 'react-pose';
 import { contactBg, pugImage } from '../../media';
+import Map from './Map';
 
 const WrapperPosed = posed.div({
   initialPose: 'closed',
@@ -127,6 +128,7 @@ const Wrapper = styled(WrapperPosed)`
 const Contact = () => {
 
   const [isOpen, setIsOpen] = React.useState(false); // modal open ? "animationStart" :"null"
+  const [openMapModal, setOpenMapModal] = React.useState(false);
 
   React.useEffect(()=>{
     // fire enter animations
@@ -139,45 +141,53 @@ const Contact = () => {
     })
   }, [])
 
+  // open modal
+  const openModal = () => {
+    setOpenMapModal(true);
+  }
+
   return (
-    <Wrapper bg={contactBg} pose={isOpen ? "open" : "closed"}>
-      <div className="contact-container">
-        <div className="support-div">
-          <div className="contact-container__options">
-            <div className="flex-row-option">
-              <img src={pugImage} alt=""/>
-              <div className="flex-row-option__content">
-                <h2>Address</h2>
-                <p>address line 1</p>
-                <p>address post code</p>
+    <React.Fragment>
+      { openMapModal && ( <Map setOpenMapModal={setOpenMapModal}/>) }
+      <Wrapper bg={contactBg} pose={isOpen ? "open" : "closed"}>  
+        <div className="contact-container">
+          <div className="support-div">
+            <div className="contact-container__options">
+              <div className="flex-row-option">
+                <img src={pugImage} alt=""/>
+                <div className="flex-row-option__content">
+                  <h2>Address</h2>
+                  <p>address line 1</p>
+                  <p>address post code</p>
+                </div>
+              </div>
+
+              <div className="flex-row-option">
+                <img src={pugImage} alt=""/>
+                <div className="flex-row-option__content">
+                  <h2>Phone</h2>
+                  <p>+44 9559421852</p>
+                </div>
+              </div>
+
+              <div className="flex-row-option">
+                <img src={pugImage} alt=""/>
+                <div className="flex-row-option__content">
+                  <h2>Map</h2>
+                  <button onClick={openModal}>Check map</button>
+                </div>
               </div>
             </div>
 
-            <div className="flex-row-option">
-              <img src={pugImage} alt=""/>
-              <div className="flex-row-option__content">
-                <h2>Phone</h2>
-                <p>+44 9559421852</p>
+            <div className="contact-container__desc">
+              <div>
+                <p>WE ARE OPEN 7 DAYS A WEEK 24H. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat unde similique magni explicabo reiciendis ad, aut error? Sequi architecto quaerat numquam dignissimos maiores, tenetur dolores?</p>
               </div>
-            </div>
-
-            <div className="flex-row-option">
-              <img src={pugImage} alt=""/>
-              <div className="flex-row-option__content">
-                <h2>Map</h2>
-                <button>Check map</button>
-              </div>
-            </div>
-          </div>
-
-          <div className="contact-container__desc">
-            <div>
-              <p>WE ARE OPEN 7 DAYS A WEEK 24H. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat unde similique magni explicabo reiciendis ad, aut error? Sequi architecto quaerat numquam dignissimos maiores, tenetur dolores?</p>
             </div>
           </div>
         </div>
-      </div>
-    </Wrapper>
+      </Wrapper>
+    </React.Fragment>
   )
 }
 
