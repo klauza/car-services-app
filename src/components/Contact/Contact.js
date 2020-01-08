@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import posed from 'react-pose';
-import { contactBg } from '../../media';
+import { contactBg, pugImage } from '../../media';
 
 const WrapperPosed = posed.div({
   initialPose: 'closed',
@@ -145,7 +145,7 @@ const Contact = () => {
         <div className="support-div">
           <div className="contact-container__options">
             <div className="flex-row-option">
-              <img src="http://placekitten.com/150/150" alt=""/>
+              <img src={pugImage} alt=""/>
               <div className="flex-row-option__content">
                 <h2>Address</h2>
                 <p>address line 1</p>
@@ -154,7 +154,7 @@ const Contact = () => {
             </div>
 
             <div className="flex-row-option">
-              <img src="http://placekitten.com/150/150" alt=""/>
+              <img src={pugImage} alt=""/>
               <div className="flex-row-option__content">
                 <h2>Phone</h2>
                 <p>+44 9559421852</p>
@@ -162,7 +162,7 @@ const Contact = () => {
             </div>
 
             <div className="flex-row-option">
-              <img src="http://placekitten.com/150/150" alt=""/>
+              <img src={pugImage} alt=""/>
               <div className="flex-row-option__content">
                 <h2>Map</h2>
                 <button>Check map</button>

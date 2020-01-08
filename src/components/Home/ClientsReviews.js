@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { pugImage } from '../../media';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -38,12 +39,12 @@ const ClientsReviews = () => {
       <h1>See what my clients say about me</h1>
 
       <div className="client-review-container">
-        <img src="http://placekitten.com/150/150" alt=""/>
+        <img src={pugImage} alt=""/>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam labore officiis perspiciatis impedit, est nulla harum optio a delectus dicta.</p>
       </div>
 
       <div className="client-review-container">
-        <img src="http://placekitten.com/150/150" alt=""/>
+        <img src={pugImage} alt=""/>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam labore officiis perspiciatis impedit, est nulla harum optio a delectus dicta.</p>
       </div>
 

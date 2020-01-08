@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import posed from 'react-pose';
 import GalleryImage from './GalleryImage';
+import { pugImage } from '../../media';
 
 const WrapperPosed = posed.div({
   initialPose: 'closed',
@@ -172,31 +173,31 @@ const Services = () => {
   const imgDb = [
     {
       id: 1,
-      img: 'http://placekitten.com/150/150'
+      img: pugImage
     },
     {
       id: 2,
-      img: 'http://placekitten.com/150/150'
+      img: pugImage
     },
     {
       id: 3,
-      img: 'http://placekitten.com/150/150'
+      img: pugImage
     },
     {
       id: 4,
-      img: 'http://placekitten.com/150/150'
+      img: pugImage
     },
     {
       id: 5,
-      img: 'http://placekitten.com/150/150'
+      img: pugImage
     },
     {
       id: 6,
-      img: 'http://placekitten.com/150/150'
+      img: pugImage
     },
     {
       id: 7,
-      img: 'http://placekitten.com/150/150'
+      img: pugImage
     }
   ]
 
