@@ -16,9 +16,9 @@
     "styled-components": "^4.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "svgr": "svgr -d src/Icons/ assets/"
   },
@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
-    "@svgr/cli": "^5.0.1"
+    "@svgr/cli": "^5.0.1",
+    "react-app-rewired": "^2.1.5"
   }
 }
