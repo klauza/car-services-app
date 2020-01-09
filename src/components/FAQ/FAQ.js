@@ -15,20 +15,7 @@ const WrapperPosed = posed.div({
 });
 const Wrapper = styled(WrapperPosed)`
   margin-top: 50px;
-  h2{
-    display: block;
-    text-align: center;
-    color: #969B00;
-    margin: 25px 0;
-    &::after{
-      content: '';
-      display: block;
-      width: 60%; margin: 15px auto 0;
-      height: 1px;
-      background: rgba(150,155,0,.35);
-    }
 
-  }
 
   ul{
     max-width: 1280px;
@@ -40,7 +27,42 @@ const Wrapper = styled(WrapperPosed)`
     }
   }
 `;
+const UnorderedListPosed = posed.ul({
+  initialPose: 'closed',
+  open: {
+    opacity: 1,
+    delayChildren: 300, 
+    staggerChildren: 150
+  },
+  closed: {    
+    opacity: 0 
+  }
+})
+const UnorderedList = styled(UnorderedListPosed)``;
 
+const HeaderPosed = posed.h2({
+  initialPose: 'closed',
+  open: {
+    opacity: 1,
+    delay: 150
+  },
+  closed: {     
+    opacity: 0
+  }
+})
+const Header = styled(HeaderPosed)`
+  display: block;
+  text-align: center;
+  color: #969B00;
+  margin: 25px 0;
+  &::after{
+    content: '';
+    display: block;
+    width: 60%; margin: 15px auto 0;
+    height: 1px;
+    background: rgba(150,155,0,.35);
+  }
+`;
 const FAQ = () => {
 
   const [isOpen, setIsOpen] = React.useState(false); // modal open ? "animationStart" :"null"
@@ -59,13 +81,13 @@ const FAQ = () => {
   
   return (
     <Wrapper pose={isOpen ? "open" : "closed"}>
-      <h2>Frequently Asked Questions</h2>
+      <Header>Frequently Asked Questions</Header>
 
-      <ul>
+      <UnorderedList>
         {faqDatabase.map(faq => 
-          <FAQItem key={faq.id} faq={faq} />
+          <FAQItem key={faq.id} faq={faq} isOpen={isOpen} />
         )}
-      </ul>
+      </UnorderedList>
 
     </Wrapper>
   )

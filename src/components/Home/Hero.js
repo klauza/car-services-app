@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import posed from 'react-pose';
 import { NavLink } from 'react-router-dom'; 
 import { background } from '../../media';
 
@@ -10,9 +11,8 @@ const Wrapper = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  @media(max-width: 768px){
-    background-position: 50% 50%;
-  }
+  background-position: 50% 50%;
+
   .hero-box{  
     position: absolute;
     bottom: 20%; left: 50%;
@@ -70,15 +70,69 @@ const Wrapper = styled.div`
     }
   }
 `;
-const Hero = () => {
-  return (
-    <Wrapper bg={background}>
 
-      <div className="hero-box">
-        <h1>Invest in your car.</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi iure alias architecto. Amet, porro rerum!</p>
-        <button><NavLink to="/services">See how it works</NavLink></button>
-      </div>
+const HeroBoxPosed = posed.div({
+  open: {
+    opacity: 1,
+    delayChildren: 250, 
+    staggerChildren: 200
+  },
+  closed: {    
+    opacity: 0 
+  }
+})
+const HeroBox = styled(HeroBoxPosed)``;
+
+const H1HeaderPosed = posed.h1({
+  open: { 
+    y: 0, 
+    opacity: 1,
+
+  },
+  closed: {
+     y: 20, 
+     opacity: 0
+  }
+})
+const H1Header = styled(H1HeaderPosed)``;
+
+const ParagraphPosed = posed.p({
+  open: { 
+    y: 0, 
+    opacity: 1,
+
+  },
+  closed: {
+     y: 20, 
+     opacity: 0
+  }
+})
+const Paragraph = styled(ParagraphPosed)``;
+
+const ButtonPosed = posed.button({
+  open: { 
+    y: 0, 
+    scale: 1,
+    opacity: 1,
+
+  },
+  closed: {
+     y: -10, 
+     scale: 0.9,
+     opacity: 0
+  }
+})
+const Button = styled(ButtonPosed)``;
+
+const Hero = ({isOpen}) => {
+  return (
+    <Wrapper bg={background} pose={isOpen ? "open" : "closed"}>
+
+      <HeroBox className="hero-box" >
+        <H1Header>Invest in your car.</H1Header>
+        <Paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi iure alias architecto. Amet, porro rerum!</Paragraph>
+        <Button><NavLink to="/services">See how it works</NavLink></Button>
+      </HeroBox>
 
     </Wrapper>
   )

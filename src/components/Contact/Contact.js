@@ -32,12 +32,11 @@ const Wrapper = styled(WrapperPosed)`
     /* padding: 100px 0; */
     @media(max-width: 768px){
       margin-top: 100px;
-      padding-bottom: 75px;
     }
     .support-div{
       max-width: 1280px;
       width: 100%;
-      margin: 0 auto;
+      margin: 50px auto 100px;
 
       display: grid; grid-template-columns: 1fr 1fr;
       align-content: center;
@@ -124,7 +123,46 @@ const Wrapper = styled(WrapperPosed)`
     }
   }
 `;
+const ContactParentOptionsPosed = posed.div({
+  initialPose: 'closed',
+  open: {
+    opacity: 1,
+    delayChildren: 100, 
+    staggerChildren: 100
+  },
+  closed: {    
+    opacity: 0 
+  }
+})
+const ContactParentOptions = styled(ContactParentOptionsPosed)``;
+const ContactOptionPosed = posed.div({
+  open: { 
+    y: 0, 
+    opacity: 1,
+    transition: { 
+      type: 'spring', 
+      stiffness: 100,
+      delay: 200
+    }
+  },
+  closed: {
+     y: 20, 
+     opacity: 0
+  }
+})
+const ContactOption = styled(ContactOptionPosed)``;
 
+const ContactDescPosed = posed.div({
+  initialPose: 'closed',
+  open: {
+    opacity: 1,
+    delay: 750
+  },
+  closed: {     
+    opacity: 0
+  }
+})
+const ContactDesc = styled(ContactDescPosed)``;
 const Contact = () => {
 
   const [isOpen, setIsOpen] = React.useState(false); // modal open ? "animationStart" :"null"
@@ -152,38 +190,38 @@ const Contact = () => {
       <Wrapper bg={contactBg} pose={isOpen ? "open" : "closed"}>  
         <div className="contact-container">
           <div className="support-div">
-            <div className="contact-container__options">
-              <div className="flex-row-option">
+            <ContactParentOptions className="contact-container__options">
+              <ContactOption className="flex-row-option">
                 <img src={pugImage} alt=""/>
                 <div className="flex-row-option__content">
                   <h2>Address</h2>
                   <p>address line 1</p>
                   <p>address post code</p>
                 </div>
-              </div>
+              </ContactOption>
 
-              <div className="flex-row-option">
+              <ContactOption className="flex-row-option">
                 <img src={pugImage} alt=""/>
                 <div className="flex-row-option__content">
                   <h2>Phone</h2>
                   <p>+44 9559421852</p>
                 </div>
-              </div>
+              </ContactOption>
 
-              <div className="flex-row-option">
+              <ContactOption className="flex-row-option">
                 <img src={pugImage} alt=""/>
                 <div className="flex-row-option__content">
                   <h2>Map</h2>
                   <button onClick={openModal}>Check map</button>
                 </div>
-              </div>
-            </div>
+              </ContactOption>
+            </ContactParentOptions>
 
-            <div className="contact-container__desc">
+            <ContactDesc className="contact-container__desc">
               <div>
                 <p>WE ARE OPEN 7 DAYS A WEEK 24H. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat unde similique magni explicabo reiciendis ad, aut error? Sequi architecto quaerat numquam dignissimos maiores, tenetur dolores?</p>
               </div>
-            </div>
+            </ContactDesc>
           </div>
         </div>
       </Wrapper>

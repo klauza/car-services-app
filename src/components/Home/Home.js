@@ -36,7 +36,7 @@ const Home = () => {
 
   return (
     <Wrapper pose={isOpen ? "open" : "closed"}>
-      <Hero />
+      <Hero isOpen={isOpen} />
       <KeyServices />
       <div style={{width: "60%", maxWidth: "900px", height: "1px", margin: "0 auto", background: "rgba(255,255,255,.4)"}}/>
       <About />

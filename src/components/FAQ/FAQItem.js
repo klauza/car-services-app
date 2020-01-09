@@ -1,8 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
+import posed from 'react-pose';
 import { HelpWebButton } from '../../Icons';
 
-const Wrapper = styled.li`
+const WrapperPosed = posed.li({
+  open: { 
+    y: 0, 
+    opacity: 1,
+    transition: { 
+      type: 'spring', 
+      stiffness: 100,
+      delay: 100
+    }
+  },
+  closed: {
+     y: 20, 
+     opacity: 0
+  }
+})
+const Wrapper = styled(WrapperPosed)`
   background: #545454;
   color: #BFBFBF;
   list-style: none;
@@ -61,9 +77,9 @@ const Wrapper = styled.li`
     }
   }
 `;
-const FAQItem = ({faq}) => {
+const FAQItem = ({faq, isOpen}) => {
   return (
-    <Wrapper>
+    <Wrapper pose={isOpen ? "open" : "closed"}>
       <div className="faq-image"><HelpWebButton /></div>
       <div className="faq-content">
         <div className="faq-content-top">Q: {faq.q}</div>
