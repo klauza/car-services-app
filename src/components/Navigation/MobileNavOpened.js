@@ -20,7 +20,7 @@ const MMenu = styled(MMenuPosed)`
   position: fixed;
   top: 50px; bottom: 0px; left: 0px; right: 0px;
   z-index: 999;
-  background: linear-gradient(to top, #000 0%, #363333 50%, #363333 100%);
+  background: linear-gradient(to top, rgba(0,0,0,1) 0%, #363333 50%, #363333 100%);
 
 `;
 //CHILRETN
@@ -60,6 +60,10 @@ const ModalImagePose = posed.div({
 })
 const ModalImage = styled(ModalImagePose)`
   display: block;
+  width: 100%;
+  max-height: 30vh;
+  height: 100%;
+  overflow: hidden;
   img{
     width: 100%;
     height: 100%;
