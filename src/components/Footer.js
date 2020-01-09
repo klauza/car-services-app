@@ -2,13 +2,17 @@ import React from 'react'
 import styled from 'styled-components';
 
 const FooterWrap = styled.div`
-  background: lightcyan;
-  padding: 75px 0;
-  margin: 0 auto;
+  background: rgba(0,0,0,.35);
+  padding: 12.5px 0;
+  margin: 0 auto 50px;
   text-align: center;
-  color: #000;
+  color: #fff;
   margin-top: auto;
   width: 100%;
+
+  @media(max-width: 768px){
+    /* display: none; */
+  }
 `;
 const Footer = () => {
   return (
