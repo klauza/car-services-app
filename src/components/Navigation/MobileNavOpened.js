@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import posed from 'react-pose';
 import { NavLink } from 'react-router-dom';
 import { background } from '../../media';
+import { Home, Facebook } from '../../Icons';
 
 // CONTAINER
 const MMenuPosed = posed.div({
@@ -43,8 +44,19 @@ const Content = styled(ContentPosed)`
 `;
 // MODAL IMAGE
 const ModalImagePose = posed.div({
-  open: { y: 0, opacity: 1 },
-  closed: { y: 20, opacity: 0 }
+  open: { 
+    y: 0, 
+    opacity: 1,
+    transition: { 
+      type: 'spring', 
+      stiffness: 100,
+      delay: 100
+    }
+  },
+  closed: {
+     y: 20, 
+     opacity: 0
+  }
 })
 const ModalImage = styled(ModalImagePose)`
   display: block;
@@ -57,9 +69,20 @@ const ModalImage = styled(ModalImagePose)`
 
 // NAV LINKS
 const ModalLinksPosed = posed.div({
-  open: { y: 0, opacity: 1 },
-  closed: { y: 50, opacity: 0 }
-})
+  open: { 
+    y: 0, 
+    opacity: 1,
+    transition: { 
+      type: 'spring', 
+      stiffness: 100,
+      delay: 200
+    }
+  },
+  closed: {
+     y: 20, 
+     opacity: 0
+  }
+});
 const ModalLinks = styled(ModalLinksPosed)`
     z-index: 2;
     width: 80%;
@@ -74,23 +97,39 @@ const ModalLinks = styled(ModalLinksPosed)`
       text-decoration: none;
       background: #545454;
       line-height: 50px;
+      
+      display: flex; flex-direction: row;
+    }
+    svg{
+      margin: 5px;
+      width: 40px; height: 40px;
     }
     a:not(:nth-child(3)){
       border-bottom: 1px solid #707070;
     }
-    div{
-      position: absolute;
-      bottom: -50px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 6px; height: 6px;
-      background: #707070;
-      display: block;
-      margin: 0 auto;
-      border-radius: 50%;
-      border: 1px solid grey;
-    }
 
+
+`;
+const DotPosed = posed.div({
+  open: { 
+    y: 0, 
+    opacity: 1,
+    transition: { 
+      delay: 400
+    }
+  },
+  closed: {
+     y: 20, 
+     opacity: 0
+  }
+})
+const Dot = styled(DotPosed)`
+  width: 6px; height: 6px;
+  background: #707070;
+  display: block;
+  margin: 25px auto 0;
+  border-radius: 50%;
+  border: 1px solid grey;
 `;
 
 const MobileNavOpened = ({menuOpen, openMobileMenu}) => {
@@ -112,11 +151,12 @@ const MobileNavOpened = ({menuOpen, openMobileMenu}) => {
         <ModalImage><img src={background} alt=""/></ModalImage>
 
         <ModalLinks>
-          <NavLink to="/" onTouchEnd={openMobileMenu}>Home</NavLink>
-          <NavLink to="/about" onTouchEnd={openMobileMenu}>About</NavLink>
-          <a href="/">Facebook</a>
-          <div></div>
+          <NavLink to="/" onTouchEnd={openMobileMenu}> <Home/> <span>Home</span> </NavLink>
+          <NavLink to="/about" onTouchEnd={openMobileMenu}> <span>About</span></NavLink>
+          <a href="/"><Facebook/> <span>Facebook</span> </a>
+          
         </ModalLinks>
+        <Dot />
       </Content>
     </MMenu>
   )

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { MobileView } from "react-device-detect";
 import MobileNavOpened from './MobileNavOpened';
 import MobileBottomNavigation from './MobileBottomNavigation';
+import { Logo } from '../../media';
 
 const Container = styled.div`
   position: fixed;
@@ -32,6 +33,10 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    img{
+      width: 100%; height: 100%;
+      width: 35px; height: 35px;
+    }
   }
 
   .mobile-business-name{
@@ -126,8 +131,8 @@ const MobileNav = () => {
 
         <Wrapper isOpen={menuOpen}>
 
-          <div className="mobile-logo">logo</div>
-          <div className="mobile-business-name"><h2>Business_name</h2></div>
+          <div className="mobile-logo"><img src={Logo} alt=""/></div>
+          <div className="mobile-business-name"><h2>Car services</h2></div>
           <div className="mobile-hamburger" onTouchEnd={openMobileMenu}>
             <div className={`menu-btn ${menuOpen ? 'burger-open' : null}`}>
               <div className="menu-btn__burger"></div>
