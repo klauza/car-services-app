@@ -4,10 +4,46 @@ import { LogoBlack } from '../../media';
 
 const Map = () => {
   const [selectedMarker, setSelectedMarker] = useState(null);
+  const [userLocation, setUserLocation] = useState({lat: null, lng: null})
 
   useEffect(()=>{
-
+    getLocation();
   }, []); 
+
+  const getCords = (position) => {
+    console.log(position);
+    setUserLocation(prevState => ({...prevState, lat: position.coords.latitude, lng: position.coords.longitude}))
+  }
+
+  const getLocation = () => {
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(getCords, handleErrors)
+    } else{
+      alert("geolocation not supported")
+    }
+  }
+
+  const handleErrors = (error) => {
+    switch(error.code) {
+      case error.PERMISSION_DENIED:
+        alert("User denied the request for Geolocation.");
+        break;
+      case error.POSITION_UNAVAILABLE:
+        alert("Location information is unavailable.");
+        break;
+      case error.TIMEOUT:
+        alert("The request to get user location timed out.");
+        break;
+      case error.UNKNOWN_ERROR:
+        alert("An unknown error occurred.");
+        break;
+      default:
+        alert("An unknown error occurred.");
+        break
+    }
+  }
+
+  console.log(userLocation)
 
   return (
     <GoogleMap 
