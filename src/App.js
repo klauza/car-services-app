@@ -6,7 +6,7 @@ import Home from './components/Home/Home';
 import Services from './components/Services/Services';
 import FAQ from './components/FAQ/FAQ';
 import Contact from './components/Contact/Contact';
-import Map from './components/Contact/Map';
+import Map from './components/Map';
 import Navigation from './components/Navigation/Navbar';
 import Footer from './components/Footer';
 

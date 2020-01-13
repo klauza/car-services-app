@@ -104,6 +104,7 @@ const ScreenNav = () => {
               <li><NavLink exact to="/services">Services</NavLink></li>
               <li><NavLink exact to="/contact">Contact</NavLink></li>
               <li className="big-screen-faq"><NavLink exact to="/frequently-asked-questions">FAQ</NavLink></li>
+              <li><NavLink exact to="/map">Map</NavLink></li>
             </div>
             <li className="fb-btn"><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><Facebook /></a></li>
           </ul>
