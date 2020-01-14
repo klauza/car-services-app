@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import posed from 'react-pose';
 import { pugImage } from '../../media';
+import { WrappedMap } from '../Map/Map';
 
 const MapWrapperPosed = posed.div({
   initialPose: 'closed',
@@ -52,37 +53,58 @@ const Content = styled(ContentPosed)`
     flex: 5;
     width: 100%;
     height: auto;
-    img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
   }
+
   .map-panel{
     flex: 2;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    &__controller{
+    &__route{
       border: 1px solid #fff;
-      width: 200px;
+      width: 100%;
       height: auto;
-      background: black;
-      span{
+      text-align: center;
+      margin: 7.5px auto;
+      p{
+        margin: 7.5px;
         display: block;
       }
-      button{
-
+      a{
+        font-size: 1.15rem;
+        margin: 5px auto;
+        display: block;
+        width: 170px;
+        line-height: 40px;
+        background: #3b65ed;;
+        color: #fff;
+        text-decoration: none;    
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,.95);
+        &:hover{
+          color: lightgrey;
+        }
       }
     }
 
-    &_button{
-      /* position: absolute; */
-      /* bottom: 0px; left: 50%; transform: translateX(-50%); */
-      /* margin-top: 25px; */
-      padding: 5px 15px;
+    &__button{
+      padding: 5px;
+      width: 200px;
+      margin: 0 auto;
+      background: #eb3131;
+      color: #fff;
+      font-size: 1.15rem;
+      border: 0;
+      box-shadow: 0 2px 1px -1px rgba(0,0,0,.95);
+      cursor: pointer;
+      &:hover{
+        color: lightgrey;
+      }
     }
   }
 `;
+
 
 const Map = ( {setOpenMapModal} ) => {
 
@@ -102,14 +124,29 @@ const Map = ( {setOpenMapModal} ) => {
   return (
     <MapWrapper pose={isOpen ? "open" : "closed"}>
       <Content>
-        <div className="map-image"><img src={pugImage} alt=""/></div>
-        <div className="map-panel">
-          <div className="map-panel__controller">
-            <span>Find the route</span>
-            <button>Submit</button>
-          </div>
-          <button className="map-panel__button" onClick={closeModal}>Close</button>
+
+        {/* MAP */}
+        <div className="map-image">
+          {/* <img src={pugImage} alt=""/> */}
+            <WrappedMap 
+              googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg&v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`} 
+              loadingElement={<div style={{height: '100%'}}/>}
+              containerElement={<div style={{height: '100%'}}/>}
+              mapElement={<div style={{height: '100%'}}/>}
+            />
+
         </div>
+
+        {/* MAP PANEL */}
+        <div className="map-panel">
+          <div className="map-panel__route">
+            <p>Go to Google Maps app and find the route to my facility:</p>
+            <a href="https://www.google.com/maps/dir//52.3023435,-0.6955347/@52.3026524,-0.6926838,16.25z" target="_blank">Find route here</a>
+          </div>
+
+          <button className="map-panel__button" onClick={closeModal}>Close Map</button>
+        </div>
+
       </Content>
     </MapWrapper>
   )
