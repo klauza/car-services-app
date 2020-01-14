@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from "react-google-maps";
 import { LogoBlack } from '../../media';
-import styled from 'styled-components';
 
 
 const Map = () => {
@@ -9,7 +8,8 @@ const Map = () => {
   const [userLocation, setUserLocation] = useState({lat: null, lng: null})
 
   useEffect(()=>{
-    getLocation();
+    // getLocation();
+    // eslint-disable-next-line
   }, []); 
 
   const getCords = (position) => {
@@ -45,7 +45,7 @@ const Map = () => {
     }
   }
 
-  console.log(userLocation)
+  // console.log(userLocation)
 
   return (
     <GoogleMap 
@@ -65,7 +65,7 @@ const Map = () => {
 
       {selectedMarker && (
         <InfoWindow position={{lat: 52.302898, lng: -0.693400}} onCloseClick={()=> setSelectedMarker(null)}>
-          <div>Details</div>
+          <div>We are here</div>
         </InfoWindow>
       )}
 

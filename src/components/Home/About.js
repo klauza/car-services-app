@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { pugImage, aboutImagesPsd } from '../../media';
+import { aboutImagesPsd } from '../../media';
 
 
 const Wrapper = styled.div`
@@ -17,7 +17,6 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     border: 2px solid black;
-    /* box-shadow: 0 2px 2px 0 rgba(0,0,0,.5); */
     p{
       text-align: center;
     }
@@ -43,7 +42,7 @@ const ImagesContainer = styled.div`
   background-position: 50% 50%;
   border: 2px solid black;
   border-top: 1px;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.5);
+  box-shadow: 0 -11px 8px -1px rgba(0,0,0,.5);
 
   height: 125px;
 
@@ -55,7 +54,7 @@ const ImagesContainer = styled.div`
 const About = () => {
   return (
     <Wrapper>
-
+    
       <div className="about-section">
         <h1>About us</h1>
         <p>We offer a vast amount of services, including engine bay cleaning, pipe cleaning. Check FACEBOOK.</p>

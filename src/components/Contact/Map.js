@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import posed from 'react-pose';
-import { pugImage } from '../../media';
 import { WrappedMap } from '../Map/Map';
 
 const MapWrapperPosed = posed.div({
@@ -39,8 +38,8 @@ const Content = styled(ContentPosed)`
   z-index: 11;
   position: fixed;
   top: 60px; bottom: 60px; left: 10px; right: 10px;
-  background: lightgoldenrodyellow;
-  border: 1px solid red;
+  background: #686868;
+  border: 1px solid rgba(255,255,255,.5);
   padding: 5px;
   display: flex;
   flex-direction: row;
@@ -63,12 +62,12 @@ const Content = styled(ContentPosed)`
     justify-content: space-between;
 
     &__route{
-      border: 1px solid #fff;
       width: 100%;
       height: auto;
       text-align: center;
-      margin: 7.5px auto;
+      padding: 35px 10px;
       p{
+        color: #fff;
         margin: 7.5px;
         display: block;
       }
@@ -127,7 +126,6 @@ const Map = ( {setOpenMapModal} ) => {
 
         {/* MAP */}
         <div className="map-image">
-          {/* <img src={pugImage} alt=""/> */}
             <WrappedMap 
               googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg&v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`} 
               loadingElement={<div style={{height: '100%'}}/>}
@@ -141,7 +139,7 @@ const Map = ( {setOpenMapModal} ) => {
         <div className="map-panel">
           <div className="map-panel__route">
             <p>Go to Google Maps app and find the route to my facility:</p>
-            <a href="https://www.google.com/maps/dir//52.3023435,-0.6955347/@52.3026524,-0.6926838,16.25z" target="_blank">Find route here</a>
+            <a href="https://www.google.com/maps/dir//52.3023435,-0.6955347/@52.3026524,-0.6926838,16.25z" target="_blank" rel="noopener noreferrer">Find route here</a>
           </div>
 
           <button className="map-panel__button" onClick={closeModal}>Close Map</button>
