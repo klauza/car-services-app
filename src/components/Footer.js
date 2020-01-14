@@ -17,13 +17,53 @@ const FooterWrap = styled.div`
   margin: 0 auto 50px;
   }
 `;
+const AboutLinkDiv = styled.div`
+  position: relative;
+
+  &::before{
+    content: '';
+    position: absolute;
+    left: 40%; top: 50%;
+    transform: translateX(-50%, -50%);
+    background: linear-gradient(to right, rgba(0,0,0,0), rgba(255,255,255,1));
+    height: 1px; width: 100px;
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    right: 40%; top: 50%;
+    transform: translateX(-50%, -50%);
+    background: linear-gradient(to left, rgba(0,0,0,0), rgba(255,255,255,1));
+    height: 1px; width: 100px;
+  }
+  a{
+    color: #fff;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+`;
+
+const Creator = styled.div`
+  p{
+    font-size: 0.7rem;
+  }
+`;
+
 const Footer = () => {
   return (
     <BrowserView style={{marginTop: 'auto'}}>
       <FooterWrap>
-        <NavLink to="/about">About</NavLink>
-        FOOTER -- Website created by Michal Klauza
-        © Copyright 2020
+
+        <AboutLinkDiv>
+          <NavLink to="/about">About</NavLink>
+        </AboutLinkDiv>
+
+        <Creator>
+          <p>Website created by Michal Klauza, Copyright © 2020</p>
+        </Creator>
+
       </FooterWrap>
     </BrowserView>
   )
