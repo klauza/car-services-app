@@ -23,7 +23,7 @@ function App() {
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/frequently-asked-questions" component={FAQ} />
         <Route exact path="/map" component={Map} />
-        <Route exact path="/about" component={About} />
+        <Route exact path="/about-website" component={About} />
       </Switch>
       <Footer />
     </BrowserRouter>

@@ -57,7 +57,7 @@ const Footer = () => {
       <FooterWrap>
 
         <AboutLinkDiv>
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/about-website">About</NavLink>
         </AboutLinkDiv>
 
         <Creator>
