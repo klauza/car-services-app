@@ -1,14 +1,17 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
-// pages
+// route pages
 import Home from './components/Home/Home';
 import Services from './components/Services/Services';
-import FAQ from './components/FAQ/FAQ';
 import Contact from './components/Contact/Contact';
-import Map from './components/Map';
+import FAQ from './components/FAQ/FAQ';
+import Map from './components/Map'; // temp
+
+// other
 import Navigation from './components/Navigation/Navbar';
 import Footer from './components/Footer';
+import About from './components/About';
 
 function App() {
   return (
@@ -20,6 +23,7 @@ function App() {
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/frequently-asked-questions" component={FAQ} />
         <Route exact path="/map" component={Map} />
+        <Route exact path="/about" component={About} />
       </Switch>
       <Footer />
     </BrowserRouter>
