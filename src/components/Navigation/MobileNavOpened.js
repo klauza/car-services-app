@@ -156,8 +156,8 @@ const MobileNavOpened = ({menuOpen, openMobileMenu}) => {
 
         <ModalLinks>
           <NavLink to="/" onTouchEnd={openMobileMenu}> <Home/> <span>Home</span> </NavLink>
-          <NavLink to="/about" onTouchEnd={openMobileMenu}> <span>About</span></NavLink>
-          <a href="/"><Facebook/> <span>Facebook</span> </a>
+          <NavLink to="/about-website" onTouchEnd={openMobileMenu}> <span>About</span></NavLink>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><Facebook/> <span>Facebook</span> </a>
           
         </ModalLinks>
         <Dot />

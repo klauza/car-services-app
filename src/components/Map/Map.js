@@ -3,14 +3,7 @@ import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from "reac
 import { LogoBlack } from '../../media';
 import styled from 'styled-components';
 
-const LinkToGoogleMaps = styled.a`
-  width: 100px;
-  height: 40px;
-  background: yellow;
-  color: #fff;
-  position: absolute;
-  top: 0; left: 0;
-`;
+
 const Map = () => {
   const [selectedMarker, setSelectedMarker] = useState(null);
   const [userLocation, setUserLocation] = useState({lat: null, lng: null})
@@ -82,9 +75,7 @@ const Map = () => {
         />
       }
 
-      <div>
-      <LinkToGoogleMaps href="https://www.google.com/maps/dir//52.3023435,-0.6955347/@52.3026524,-0.6926838,16.25z" target="_blank">Link</LinkToGoogleMaps>
-      </div>
+
     </GoogleMap>
   )
 }

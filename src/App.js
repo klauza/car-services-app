@@ -6,7 +6,6 @@ import Home from './components/Home/Home';
 import Services from './components/Services/Services';
 import Contact from './components/Contact/Contact';
 import FAQ from './components/FAQ/FAQ';
-import Map from './components/Map'; // temp
 
 // other
 import Navigation from './components/Navigation/Navbar';
@@ -22,7 +21,6 @@ function App() {
         <Route exact path="/services" component={Services} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/frequently-asked-questions" component={FAQ} />
-        <Route exact path="/map" component={Map} />
         <Route exact path="/about-website" component={About} />
       </Switch>
       <Footer />

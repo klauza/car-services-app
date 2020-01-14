@@ -19,6 +19,18 @@ const Wrapper = styled(WrapperPosed)`
 
 `;
 
+const Separator = styled.div`
+  width: 60%;
+  max-width: 900px;
+  height: 1px;
+  margin: 125px auto;
+  background: linear-gradient(to right, 
+    rgba(255,255,255,0),
+    rgba(255,255,255,.5),
+    rgba(255,255,255,0)
+    );
+`;
+
 const Home = () => {
 
   const [isOpen, setIsOpen] = React.useState(false); // modal open ? "animationStart" :"null"
@@ -38,7 +50,9 @@ const Home = () => {
     <Wrapper pose={isOpen ? "open" : "closed"}>
       <Hero isOpen={isOpen} />
       <KeyServices />
-      <div style={{width: "60%", maxWidth: "900px", height: "1px", margin: "0 auto", background: "rgba(255,255,255,.4)"}}/>
+
+      <Separator />
+
       <About />
       <ClientsReviews />
     </Wrapper>
