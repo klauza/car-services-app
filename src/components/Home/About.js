@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { pugImage, aboutImagesPsd } from '../../media';
 
 
 const Wrapper = styled.div`
@@ -16,7 +17,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     border: 2px solid black;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.5);
+    /* box-shadow: 0 2px 2px 0 rgba(0,0,0,.5); */
     p{
       text-align: center;
     }
@@ -32,16 +33,39 @@ const Wrapper = styled.div`
   }
 `;
 
+const ImagesContainer = styled.div`
+  max-width: 1080px;
+  width: auto;
+  margin: 0 auto;
+  background: url(' ${props => props.bg} ');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  border: 2px solid black;
+  border-top: 1px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.5);
+
+  height: 125px;
+
+  @media(max-width: 768px){
+    margin: 0 15px;
+  }
+`;
+
 const About = () => {
   return (
     <Wrapper>
 
       <div className="about-section">
         <h1>About us</h1>
-        <p>We offer a vast amount of services, including engine bay cleaning, pipe cleaning</p>
+        <p>We offer a vast amount of services, including engine bay cleaning, pipe cleaning. Check FACEBOOK.</p>
 
         <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas incidunt dicta iste minus cupiditate optio!</h3>
       </div>
+
+      <ImagesContainer bg={aboutImagesPsd} />
+
+      
 
     </Wrapper>
   )
