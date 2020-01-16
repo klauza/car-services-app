@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import posed from 'react-pose';
 import GalleryImage from './GalleryImage';
 import { pugImage } from '../../media';
+import { TurboEngine, Home, MechanicalEngineer } from '../../Icons';
 
 const WrapperPosed = posed.div({
   initialPose: 'closed',
@@ -49,6 +50,10 @@ const Example = styled.div`
   height: 55px;
   margin: 50px 0;
   position: relative;
+  svg{
+    fill: #fff;
+    width: 50px; height: 50px;
+  }
 
   div{
     /* animation: example-animation 2s infinite; */
@@ -208,7 +213,11 @@ const Services = () => {
 
       <Example>
         <p>See examples of our work</p>
-        <div></div>
+        <div>
+          Turbo svg <TurboEngine />
+          Mechanic svg <MechanicalEngineer />
+          Home: <Home />
+        </div>
       </Example>
 
       <Backdrop showBackdrop={showBackdrop} />

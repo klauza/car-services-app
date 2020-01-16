@@ -1,17 +1,22 @@
 export const faqDatabase = [
   {
     id: 1,
-    q: 'lorem-1 somethin lorem-1 somethin lorem-1 somethin lorem-1 somethin lorem-1 somethin lorem-1 somethin lorem-1 somethin  lorem-1 somethin lorem-1 somethin',
-    a: 'lorem-1 smthin answer lorem-1 smthin answer lorem-1 smthin answer lorem-1 smthin answerlorem-1 smthin answerv lorem-1 smthin answer lorem-1 smthin answer lorem-1 smthin answer lorem-1 smthin answerlorem-1 smthin answerlorem-1 smthin answerlorem-1 smthin answerlorem-1 smthin answerlorem-1 smthin answerlorem-1 smthin answerlorem-1 smthin answerlorem-1 smthin answerlorem-1 smthin answerlorem-1 smthin answerlorem-1 smthin answer'
+    q: 'How long does it take?',
+    a: 'It takes no more than 45 minutes including mounting the device into and from your car. Within this time you can sit down and chill.'
   },
   {
     id: 2,
-    q: 'lorem-2 nothin',
-    a: 'lorem2- nothing to answer here'
+    q: 'On what types of engine will the cleaning work?',
+    a: 'HHO carbon cleaner is suitable for any gas, diesel engine. We service all types of engines from passenger cars, SUVs, pickup trucks, motorbikes.'
   },
   {
     id: 3,
-    q: 'lorem-3 questionarre goes here. Longer question',
-    a: 'lorem3- nothingdsa dsa- nothingdsa dsa- nothingdsa dsa- nothingdsa dsa- nothingdsa dsa- nothingdsa dsa- nothingdsa dsa to answer here'
+    q: 'Can it damage my engine?',
+    a: 'No, our carbon cleaner is used for engine maintenance. Oxygen-hydrogen carbon cleaning completely removes carbon from the engine and has absolute effect on emission reduction.'
+  },
+  {
+    id: 4,
+    q: 'How much will it cost if I will come with two cars?',
+    a: 'According to pricing table, the cost of service will include a promotion on a second car, so It would be 79,97.'
   }
 ]

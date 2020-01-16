@@ -31,7 +31,7 @@ const Wrapper = styled(WrapperPosed)`
     height: auto;
     /* padding: 100px 0; */
     @media(max-width: 768px){
-      margin-top: 100px;
+      margin-top: 175px;
     }
     .support-div{
       max-width: 1280px;
@@ -219,7 +219,7 @@ const Contact = () => {
 
             <ContactDesc className="contact-container__desc">
               <div>
-                <p>WE ARE OPEN 7 DAYS A WEEK 24H. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat unde similique magni explicabo reiciendis ad, aut error? Sequi architecto quaerat numquam dignissimos maiores, tenetur dolores?</p>
+                <p>WE ARE OPEN 7 DAYS A WEEK 24H. WRITE HERE ABOUT ACCESSIBILITY or steps to set up appointment: eg: "please make a call for further appointment details!". Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat unde similique magni explicabo reiciendis ad, aut error? Sequi architecto quaerat numquam dignissimos maiores, tenetur dolores?</p>
               </div>
             </ContactDesc>
           </div>

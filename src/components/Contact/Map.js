@@ -38,7 +38,7 @@ const Content = styled(ContentPosed)`
   z-index: 11;
   position: fixed;
   top: 60px; bottom: 60px; left: 10px; right: 10px;
-  background: #686868;
+  background: linear-gradient(to bottom, #262626, #686868);
   border: 1px solid rgba(255,255,255,.5);
   padding: 5px;
   display: flex;
@@ -66,6 +66,9 @@ const Content = styled(ContentPosed)`
       height: auto;
       text-align: center;
       padding: 35px 10px;
+      @media(max-width: 768px){
+        padding: 5px 10px;
+      }
       p{
         color: #fff;
         margin: 7.5px;
@@ -97,6 +100,7 @@ const Content = styled(ContentPosed)`
       border: 0;
       box-shadow: 0 2px 1px -1px rgba(0,0,0,.95);
       cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
       &:hover{
         color: lightgrey;
       }
