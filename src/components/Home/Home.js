@@ -5,6 +5,9 @@ import KeyServices from './KeyServices';
 import ClientsReviews from './ClientsReviews';
 import posed from 'react-pose';
 import styled from 'styled-components';
+import HowItWorks from './HowItWorks';
+import Pricing from './Pricing';
+import Benefits from './Benefits';
 
 const WrapperPosed = posed.div({
   initialPose: 'closed',
@@ -16,7 +19,7 @@ const WrapperPosed = posed.div({
   }
 });
 const Wrapper = styled(WrapperPosed)`
-
+  overflow: hidden;
 `;
 
 const Separator = styled.div`
@@ -49,7 +52,10 @@ const Home = () => {
   return (
     <Wrapper pose={isOpen ? "open" : "closed"}>
       <Hero isOpen={isOpen} />
-      <KeyServices />
+      <HowItWorks />
+      <Benefits />
+      <Pricing />
+      {/* <KeyServices /> */}
 
       <Separator />
 
