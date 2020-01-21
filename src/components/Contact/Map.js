@@ -26,11 +26,14 @@ const ContentPosed = posed.div({
   open: {
     y: 0,
     opacity: 1,
-    delayChildren: 500, 
-    staggerChildren: 50
+    transition: { 
+      type: 'spring', 
+      stiffness: 50,
+      delay: 200
+    }
   },
   closed: {     
-    y: 400,
+    y: 200,
     opacity: 0 
   }
 });
