@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import { faqDatabase } from './FAQDatabase';
 import FAQItem from './FAQItem';
 import posed from 'react-pose';
+import Hero from './Hero';
 
-const WrapperPosed = posed.div({
+const WrapperContainer = posed.div({
   initialPose: 'closed',
   open: {
     opacity: 1,
@@ -13,7 +14,8 @@ const WrapperPosed = posed.div({
     opacity: 0
   }
 });
-const Wrapper = styled(WrapperPosed)`
+const Container = styled(WrapperContainer)``; 
+const Wrapper = styled.div`
   margin-top: 50px;
 
 
@@ -80,16 +82,19 @@ const FAQ = () => {
 
   
   return (
-    <Wrapper pose={isOpen ? "open" : "closed"}>
-      <Header>Frequently Asked Questions</Header>
+    <Container pose={isOpen ? "open" : "closed"}>
+      <Hero />
+      <Wrapper>
+        <Header>Frequently Asked Questions</Header>
 
-      <UnorderedList>
-        {faqDatabase.map(faq => 
-          <FAQItem key={faq.id} faq={faq} isOpen={isOpen} />
-        )}
-      </UnorderedList>
+        <UnorderedList>
+          {faqDatabase.map(faq => 
+            <FAQItem key={faq.id} faq={faq} isOpen={isOpen} />
+          )}
+        </UnorderedList>
 
-    </Wrapper>
+      </Wrapper>
+    </Container>
   )
 }
 
