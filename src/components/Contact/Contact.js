@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import posed from 'react-pose';
 import { contactBg, pugImage } from '../../media';
+import { Home, Address, PhoneCall, Pin } from '../../Icons';
 import Map from './Map';
 
 const WrapperPosed = posed.div({
@@ -63,9 +64,19 @@ const Wrapper = styled(WrapperPosed)`
       .flex-row-option{
         padding: 15px 5px;
         display: flex; flex-direction: row;
+
         @media(max-width:768px){
           display: grid; grid-template-columns: 1fr 1fr;
-          justify-content: space-around;
+          /* justify-items: space-around; */
+          /* justify-items: center; */
+        }
+        svg{
+          width: 100px; height: auto;
+          fill: rgba(255,255,255,.75);
+          @media(max-width: 768px){
+            width: 75px;
+          display: block; margin: 0 auto;
+          }
         }
         h2{
           color: #969B00;
@@ -99,9 +110,12 @@ const Wrapper = styled(WrapperPosed)`
         }
 
         &__content{
-          margin-left: 5px;
+          margin-left: 25px;
           display: grid;
           align-content: center;
+          @media(max-width: 768px){
+            margin-left: 5px;
+          }
         }
       }
       
@@ -192,7 +206,7 @@ const Contact = () => {
           <div className="support-div">
             <ContactParentOptions className="contact-container__options">
               <ContactOption className="flex-row-option">
-                <img src={pugImage} alt=""/>
+                <Home />
                 <div className="flex-row-option__content">
                   <h2>Address</h2>
                   <p>address line 1</p>
@@ -201,7 +215,7 @@ const Contact = () => {
               </ContactOption>
 
               <ContactOption className="flex-row-option">
-                <img src={pugImage} alt=""/>
+                <PhoneCall />
                 <div className="flex-row-option__content">
                   <h2>Phone</h2>
                   <p>+44 9559421852</p>
@@ -209,7 +223,7 @@ const Contact = () => {
               </ContactOption>
 
               <ContactOption className="flex-row-option">
-                <img src={pugImage} alt=""/>
+                <Pin />
                 <div className="flex-row-option__content">
                   <h2>Map</h2>
                   <button onClick={openModal}>Check map</button>
@@ -219,7 +233,7 @@ const Contact = () => {
 
             <ContactDesc className="contact-container__desc">
               <div>
-                <p>WE ARE OPEN 7 DAYS A WEEK 24H. WRITE HERE ABOUT ACCESSIBILITY or steps to set up appointment: eg: "please make a call for further appointment details!". Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat unde similique magni explicabo reiciendis ad, aut error? Sequi architecto quaerat numquam dignissimos maiores, tenetur dolores?</p>
+                <p>Contact me to get a quote! WE ARE OPEN 7 DAYS A WEEK 24H. WRITE HERE ABOUT ACCESSIBILITY or steps to set up appointment: eg: "please make a call for further appointment details!". Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat unde similique magni explicabo reiciendis ad, aut error? Sequi architecto quaerat numquam dignissimos maiores, tenetur dolores?</p>
               </div>
             </ContactDesc>
           </div>
