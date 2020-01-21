@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import HowItWorks from './HowItWorks';
 import Pricing from './Pricing';
 import Benefits from './Benefits';
+import CarouselTwo from './Carousel';
 
 const WrapperPosed = posed.div({
   initialPose: 'closed',
@@ -19,6 +20,8 @@ const WrapperPosed = posed.div({
   }
 });
 const Wrapper = styled(WrapperPosed)`
+width: 100%;
+height: 100%;
   overflow: hidden;
 `;
 
@@ -51,7 +54,8 @@ const Home = () => {
 
   return (
     <Wrapper pose={isOpen ? "open" : "closed"}>
-      <Hero isOpen={isOpen} />
+      {/* <Hero isOpen={isOpen} /> */}
+      <CarouselTwo />
       <HowItWorks />
       <Benefits />
       <Pricing />

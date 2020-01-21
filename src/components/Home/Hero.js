@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import posed from 'react-pose';
-import { NavLink } from 'react-router-dom'; 
+import { NavLink } from 'react-router-dom';
 import { background } from '../../media';
+import CarouselOld from './CarouselOld';
+import Carousel from './Carousel';
 
 
 const Wrapper = styled.div`
@@ -128,11 +130,13 @@ const Hero = ({isOpen}) => {
   return (
     <Wrapper bg={background} pose={isOpen ? "open" : "closed"}>
 
-      <HeroBox className="hero-box" >
+      {/* <HeroBox className="hero-box" >
         <H1Header>Invest in your car.</H1Header>
         <Paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi iure alias architecto. Amet, porro rerum!</Paragraph>
         <Button><NavLink to="/services">See how it works</NavLink></Button>
-      </HeroBox>
+      </HeroBox> */}
+      <Carousel />
+
 
     </Wrapper>
   )
