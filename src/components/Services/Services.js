@@ -4,8 +4,13 @@ import posed from 'react-pose';
 import GalleryImage from './GalleryImage';
 import { pugImage } from '../../media';
 import { TurboEngine, Home, MechanicalEngineer } from '../../Icons';
+import Hero from './Hero';
+import GalleryContainer from './GalleryContainer';
+import { NavLink } from 'react-router-dom';
 
-const WrapperPosed = posed.div({
+import './ImageGallery.scss';
+
+const WrapperContainer = posed.div({
   initialPose: 'closed',
   open: {
     opacity: 1,
@@ -14,25 +19,65 @@ const WrapperPosed = posed.div({
     opacity: 0
   }
 });
-const Wrapper = styled(WrapperPosed)`
+const Container = styled(WrapperContainer)``;
+const Wrapper = styled.div`
+  .service-div{
+    text-decoration: none;
+    padding: 10px 2.5px;
+    width: 600px;
+    margin: 25px auto 0;
+    background: rgba(255,255,255,.25);
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr;
+    grid-auto-rows: auto;
+    align-items: center;
+    justify-items: center;
+    @media(max-width: 768px){
+      width: 100%;
+    }
+    svg{
+      width: 35px; height: 35px;
+      fill: #fff;
+    }
+
+    &>svg{
+
+    }
+    h2{
+
+    }
+    div{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      svg{
+
+      }
+    }
+  }
+
+
   display: flex; flex-direction: column;
-  padding-top: 50px;
+  /* padding-top: 50px; */
   padding-bottom: 150px;
   max-width: 1280px;
   width: 100%;
   /* height: 100vh; */
   margin: 0px auto;
   h2{
-    margin: 25px 0;
+    letter-spacing: 5px;
+    /* font-size: 3em; */
     text-align: center;
     color: #969B00;
-    &::after{
+    /* &::after{
       content: '';
       display: block;
       width: 60%; margin: 15px auto 0;
       height: 1px;
       background: rgba(150,155,0,.35);
-    }
+    } */
   }
   p{
     text-align: center;
@@ -159,6 +204,7 @@ const Backdrop = styled.div`
   z-index: 4;
 `;
 
+
 const Services = () => {
 
   const [showBackdrop, setShowBackdrop] = React.useState(false);
@@ -207,27 +253,54 @@ const Services = () => {
   ]
 
   return (
-    <Wrapper pose={isOpen ? "open" : "closed"}>
-      <h2>Services</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, est.</p>
+    <Container pose={isOpen ? "open" : "closed"}>
+      <Hero />
+      <Wrapper >
+        <h2>Pick a service you'd be interested in</h2>
 
-      <Example>
-        <p>See examples of our work</p>
-        <div>
-          Turbo svg <TurboEngine />
-          Mechanic svg <MechanicalEngineer />
-          Home: <Home />
-        </div>
-      </Example>
+        <NavLink className="service-div" exact to="/services/carbon-cleaning">
+          <TurboEngine />
+          <h2>Carbon cleaning</h2>
+          <div>
+            <TurboEngine />
+            <TurboEngine />
+            <TurboEngine />
+          </div>
+        </NavLink>
 
-      <Backdrop showBackdrop={showBackdrop} />
+          <NavLink className="service-div" exact to="/services/tinting">
+            <TurboEngine />
+            <h2>Tinting</h2>
+            <div>
+              <TurboEngine />
+              <TurboEngine />
+            </div>
+          </NavLink>
 
-      <ServicesGallery>
 
-        {imgDb.map(img => <GalleryImage key={img.id} showBackdrop={showBackdrop} setShowBackdrop={setShowBackdrop} img={img} /> )}
-        
-      </ServicesGallery>
-    </Wrapper>
+
+
+        {/* <Example>
+          <p>See examples of our work</p>
+          <div>
+            Turbo svg <TurboEngine />
+            Mechanic svg <MechanicalEngineer />
+            Home: <Home />
+          </div>
+        </Example> */}
+
+        {/* <Backdrop showBackdrop={showBackdrop} /> */}
+
+        {/* <GalleryContainer /> */}
+
+        {/* <ServicesGallery>
+
+          {imgDb.map(img => <GalleryImage key={img.id} showBackdrop={showBackdrop} setShowBackdrop={setShowBackdrop} img={img} /> )}
+          
+        </ServicesGallery> */}
+
+      </Wrapper>
+    </Container>
   )
 }
 

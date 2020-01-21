@@ -1,0 +1,26 @@
+.image-gallery{
+  &-content{
+    display: flex; flex-direction: row;
+    @media(max-width: 768px){
+      flex-direction: column;
+    }
+  }
+
+  &-slide-wrapper{
+    // flex: 5!important;
+  }
+
+  &-thumbnails-wrapper{
+    // flex: 1!important;
+    .image-gallery-thumbnails{
+      &-container{
+        display: flex; flex-direction: column;
+        @media(max-width: 768px){
+          flex-direction: row;
+        }
+      }
+      
+    }
+  }
+
+}

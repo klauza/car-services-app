@@ -1,3 +1,5 @@
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
 *, *::before, *::after{
   margin: 0; padding: 0; box-sizing: border-box;
 }
@@ -40,4 +42,51 @@ body {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
+}
+.carousel-slider{
+  li.slide{
+    height: 80vh;
+    .carousel-content{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  height: 80vh;
+
+  .slider-wrapper{
+    height: 100%; width: 100%;
+  }
+  div{
+ 
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    p{
+      opacity: 1!important;
+    }
+  }
+}
+.control-arrow{
+  padding: 10px!important;
+  @media(max-width: 768px){
+    display: none;
+  }
+}
+.carousel-static-height{
+  // overflow: hidden;
+}
+
+.custom-css-react-carousel-main{
+  // height: 100vh;
+}
+.custom-css-react-carousel-image{
+  object-fit: cover;
+  width: 100%; height: 100%;
+}
+.custom-carousel-button{
+  border: 1px solid grey;
+  background: orange;
 }
