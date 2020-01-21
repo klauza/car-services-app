@@ -17,7 +17,7 @@ const BigScreenNav = styled.div`
   max-width: 1280px;
   width: auto;
   margin: 0 auto;
-  ul{
+  .ul-main{
     display: flex; flex-direction: row; 
     justify-content: space-between;
     align-items: center;
@@ -34,6 +34,26 @@ const BigScreenNav = styled.div`
         width: auto; height: 40px;
       }
     }
+
+    /* SERVICES */
+    .li-services-main{
+      position: relative;
+      &:hover .ul-services{
+        display: block;
+      }
+      .ul-services{
+        width: 130px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background: black;
+        color: #fff;
+        z-index: 999;
+
+        display: none;
+      }
+    }
+
     .fb-btn{
       cursor: pointer;
 
@@ -97,11 +117,20 @@ const ScreenNav = () => {
     <BrowserView>
       <Container>
         <BigScreenNav>
-          <ul>
+          <ul className="ul-main">
             <div className="logo-area"> <img src={Logo} alt="" /> <span>Car Services</span></div>
             <div className="big-screen-links">
               <li><NavLink exact to="/">Home</NavLink></li>
-              <li><NavLink exact to="/services">Services</NavLink></li>
+
+              <li className="li-services-main">
+                <NavLink exact to="/services">Services</NavLink>
+                <ul className="ul-services">
+                  <li><NavLink exact to="/services/carbon-cleaning">Carbon cleaning</NavLink></li>
+                  <li><NavLink exact to="/services/tinting">Tinting</NavLink></li>
+                </ul>
+                
+              </li>
+
               <li><NavLink exact to="/contact">Contact</NavLink></li>
               <li className="big-screen-faq"><NavLink exact to="/frequently-asked-questions">FAQ</NavLink></li>
             </div>
