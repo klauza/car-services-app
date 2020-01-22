@@ -120,19 +120,19 @@ const ScreenNav = () => {
           <ul className="ul-main">
             <div className="logo-area"> <img src={Logo} alt="" /> <span>Car Services</span></div>
             <div className="big-screen-links">
-              <li><NavLink exact to="/">Home</NavLink></li>
+              <li><NavLink exact to="/" activeClassName="active">Home</NavLink></li>
 
               <li className="li-services-main">
-                <NavLink exact to="/services">Services</NavLink>
+                <NavLink exact to="/services" activeClassName="active">Services</NavLink>
                 <ul className="ul-services">
-                  <li><NavLink exact to="/services/carbon-cleaning">Carbon cleaning</NavLink></li>
-                  <li><NavLink exact to="/services/tinting">Tinting</NavLink></li>
+                  <li><NavLink exact to="/services/carbon-cleaning" activeClassName="active">Carbon cleaning</NavLink></li>
+                  <li><NavLink exact to="/services/tinting" activeClassName="active">Tinting</NavLink></li>
                 </ul>
                 
               </li>
 
-              <li><NavLink exact to="/contact">Contact</NavLink></li>
-              <li className="big-screen-faq"><NavLink exact to="/frequently-asked-questions">FAQ</NavLink></li>
+              <li><NavLink exact to="/contact" activeClassName="active">Contact</NavLink></li>
+              <li className="big-screen-faq"><NavLink exact to="/frequently-asked-questions" activeClassName="active">FAQ</NavLink></li>
             </div>
             <li className="fb-btn"><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><Facebook /></a></li>
           </ul>

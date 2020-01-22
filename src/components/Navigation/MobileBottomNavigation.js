@@ -82,10 +82,11 @@ const MobileBottomNavigation = () => {
     <Wrapper>
 
       <div>
-        <NavLink exact to="/"> <Home /><span>Home</span></NavLink>
-        <NavLink exact to="/services"> <Tools /><span>Services</span> </NavLink>
-        <NavLink exact to="/contact"> <SpeechBubble /><span>Contact</span></NavLink>
-        <NavLink exact to="/frequently-asked-questions"> <Help /><span>FAQ</span></NavLink>
+      
+        <NavLink exact to="/" activeClassName="active"> <Home /><span>Home</span></NavLink>
+        <NavLink exact to="/services" activeClassName="active"> <Tools /><span>Services</span> </NavLink>
+        <NavLink exact to="/contact" activeClassName="active"> <SpeechBubble /><span>Contact</span></NavLink>
+        <NavLink exact to="/frequently-asked-questions" activeClassName="active"> <Help /><span>FAQ</span></NavLink>
       </div>
 
     </Wrapper>

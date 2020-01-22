@@ -29,10 +29,12 @@ overflow: hidden;
   margin-top: 25px;
   height: 50px;
   svg{
+    fill: rgba(255,255,255,.8);
     width: 35px; height: 35px;
     display: block;
     margin: 0 auto;
     transform: rotateZ(90deg);
+    filter: drop-shadow( 7px -5px 5px rgba(0, 0, 0, .7));
   }
 }
 `;

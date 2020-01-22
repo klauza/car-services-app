@@ -8,6 +8,8 @@ export { default as LogoBlack } from './images/LOGO_black.png';
 export { default as benefits } from './images/benefits.JPG';
 export { default as diagnosticToolImage } from './images/diagnosticToolImage.jpg';
 
+// pattern for Home/DiagnosticTool
+export { default as diagnosticToolPattern } from './images/repeated-square-dark.png';
 // Carousel Main
 export { default as carTint1 } from './images/car-headlight-tint-1.jpg';
 export { default as carTint2 } from './images/car-headlight-tint-2.jpg';

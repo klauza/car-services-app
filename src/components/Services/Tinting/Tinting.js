@@ -140,7 +140,8 @@ const Pricing = styled.div`
   padding-bottom: 20px;
   h1{
     border-radius: 3px;
-    background: #000;
+    /* background: #000; */
+    background: linear-gradient(to right, #000, #000, rgba(0,0,0,0));
     color: #fff;
     margin-bottom: 10px;
   }
@@ -152,7 +153,8 @@ const Pricing = styled.div`
   }
   p{
     border-radius: 3px;
-    background: #5A5A5A;
+    /* background: #5A5A5A; */
+    background: linear-gradient(to right, #5A5A5A, #5A5A5A, rgba(0,0,0,0));
     padding: 30px 5px;
     margin: 5px 0;
   }

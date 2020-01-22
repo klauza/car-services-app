@@ -76,6 +76,11 @@ const Wrapper = styled.div`
     /* font-size: 3em; */
     text-align: center;
     color: #969B00;
+    font-family: 'Trajan Pro', sans-serif;
+    letter-spacing: 7px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 2px rgba(0,0,0,1);
+
     /* &::after{
       content: '';
       display: block;
@@ -267,7 +272,7 @@ const Services = () => {
       <Wrapper >
         <h1>SERVICES</h1>
 
-        <NavLink className="service-div" exact to="/services/carbon-cleaning">
+        <NavLink className="service-div" exact to="/services/carbon-cleaning" activeClassName="active">
           <Next />
           <h2>Carbon cleaning</h2>
           <div className="service-div-icons">
@@ -277,7 +282,7 @@ const Services = () => {
           </div>
         </NavLink>
 
-        <NavLink className="service-div" exact to="/services/tinting">
+        <NavLink className="service-div" exact to="/services/tinting" activeClassName="active">
           <Next />
           <h2>Tinting</h2>
           <div className="service-div-icons">

@@ -1,11 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { diagnosticToolImage } from '../../media';
+import { diagnosticToolImage, diagnosticToolPattern } from '../../media';
 
 const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
-  background: rgba(84, 84, 84, 1);
+  box-shadow: 0 0 25px -1px rgba(0,0,0,1);
+  /* background: rgba(84, 84, 84, 1); */
+  background: linear-gradient(150deg, rgba(84, 84, 84, 1), rgba(46, 46, 46, 1));
+  /* background: url(${diagnosticToolPattern}) repeat; */
   position: relative;
   .front{
     position: absolute;
@@ -25,18 +28,31 @@ const Wrapper = styled.div`
     p{
       color: #fff;
     }
+
   }
   .back{
     position: absolute;
     top: 0;
     right: 0;
     width: 100%; height: 100%;
+    box-shadow: inset 0 0 25px -1px rgba(255,0,0,1);
     img{
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    opacity: 0.75;
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: red;
+      z-index: 250;
+    }
+
   }
 `;
 

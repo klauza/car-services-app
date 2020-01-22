@@ -165,9 +165,9 @@ const MobileNavOpened = ({menuOpen, openMobileMenu}) => {
         <ModalImage><img src={background} alt=""/></ModalImage>
 
         <ModalLinks>
-          <NavLink to="/" onTouchEnd={openMobileMenu}> <Home/> <span>Back to Home</span> </NavLink>
+          <NavLink exact to="/" onTouchEnd={openMobileMenu} activeClassName="active"> <Home/> <span>Back to Home</span> </NavLink>
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><Facebook/> <span>Facebook</span> </a>
-          <NavLink to="/about-website" onTouchEnd={openMobileMenu}> <HelpWebButton /> <span>About website</span></NavLink>
+          <NavLink exact to="/about-website" onTouchEnd={openMobileMenu} activeClassName="active"> <HelpWebButton /> <span>About website</span></NavLink>
           
         </ModalLinks>
         <Dot />
