@@ -9,6 +9,11 @@ const Wrapper = styled.div`
   background: #fff;
   border-radius: 8px;
   text-align: center;
+  h1{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background: #d4d4d4;
+  }
   p{
     padding: 30px 0;
   }

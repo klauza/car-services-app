@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import posed from 'react-pose';
 import GalleryImage from './GalleryImage';
 import { pugImage } from '../../media';
-import { TurboEngine, Home, MechanicalEngineer } from '../../Icons';
+import { TurboEngine, Next, MechanicalEngineer, Engine, Heart, Headlight, Tint } from '../../Icons';
 import Hero from './Hero';
 import GalleryContainer from './GalleryContainer';
 import { NavLink } from 'react-router-dom';
@@ -28,16 +28,17 @@ const Wrapper = styled.div`
     margin: 25px auto 0;
     background: rgba(255,255,255,.25);
     display: grid;
-    grid-template-columns: 50px 1fr 1fr;
+    grid-template-columns: auto 1fr 1fr;
     grid-auto-rows: auto;
     align-items: center;
     justify-items: center;
+    box-shadow: 0 3px 2px -1px rgba(0,0,0,.6);
     @media(max-width: 768px){
       width: 100%;
     }
-    svg{
-      width: 35px; height: 35px;
-      fill: #fff;
+    &>svg{
+      margin: 0 5px;
+      width: 25px; height: auto;
     }
 
     &>svg{
@@ -46,15 +47,19 @@ const Wrapper = styled.div`
     h2{
 
     }
-    div{
+    .service-div-icons{
       width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
 
       svg{
-
+        width: 35px; height: 35px;
+        fill: #fff;
       }
+    }
+    &:hover{
+      opacity: 0.85;
     }
   }
 
@@ -66,8 +71,8 @@ const Wrapper = styled.div`
   width: 100%;
   /* height: 100vh; */
   margin: 0px auto;
-  h2{
-    letter-spacing: 5px;
+  h1{
+    letter-spacing: 12px;
     /* font-size: 3em; */
     text-align: center;
     color: #969B00;
@@ -78,6 +83,10 @@ const Wrapper = styled.div`
       height: 1px;
       background: rgba(150,155,0,.35);
     } */
+  }
+  h2{
+    text-align: center;
+    color: #969B00;
   }
   p{
     text-align: center;
@@ -256,26 +265,26 @@ const Services = () => {
     <Container pose={isOpen ? "open" : "closed"}>
       <Hero />
       <Wrapper >
-        <h2>Pick a service you'd be interested in</h2>
+        <h1>SERVICES</h1>
 
         <NavLink className="service-div" exact to="/services/carbon-cleaning">
-          <TurboEngine />
+          <Next />
           <h2>Carbon cleaning</h2>
-          <div>
+          <div className="service-div-icons">
             <TurboEngine />
-            <TurboEngine />
-            <TurboEngine />
+            <Engine />
+            <Heart />
           </div>
         </NavLink>
 
-          <NavLink className="service-div" exact to="/services/tinting">
-            <TurboEngine />
-            <h2>Tinting</h2>
-            <div>
-              <TurboEngine />
-              <TurboEngine />
-            </div>
-          </NavLink>
+        <NavLink className="service-div" exact to="/services/tinting">
+          <Next />
+          <h2>Tinting</h2>
+          <div className="service-div-icons">
+            <Headlight />
+            <Tint />
+          </div>
+        </NavLink>
 
 
 

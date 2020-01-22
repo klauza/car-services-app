@@ -33,7 +33,7 @@ const About = () => {
     <div>
       <Block>
         <div>Icons & Images</div>
-        <p><span>Icons taken from <strong>flaticon.com</strong>, authors: </span><i>freepik, gregor-cresnar, eucalyp, pixel-buddha</i></p>
+        <p><span>Icons taken from <strong>flaticon.com</strong>, authors: </span><i>freepik, gregor-cresnar, eucalyp, Pixel-perfect, pixel-buddha, Those Icons, Smashicons, Nikita Golubev</i></p>
         <p>Images taken from pexels</p>
       </Block>
 

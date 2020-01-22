@@ -9,6 +9,7 @@ import HowItWorks from './HowItWorks';
 import Pricing from './Pricing';
 import Benefits from './Benefits';
 import CarouselTwo from './Carousel';
+import { Next } from '../../Icons';
 
 const WrapperPosed = posed.div({
   initialPose: 'closed',
@@ -22,7 +23,17 @@ const WrapperPosed = posed.div({
 const Wrapper = styled(WrapperPosed)`
 width: 100%;
 height: 100%;
-  overflow: hidden;
+overflow: hidden;
+.down-arrow{
+  margin-top: 25px;
+  height: 50px;
+  svg{
+    width: 35px; height: 35px;
+    display: block;
+    margin: 0 auto;
+    transform: rotateZ(90deg);
+  }
+}
 `;
 
 const Separator = styled.div`
@@ -56,6 +67,7 @@ const Home = () => {
     <Wrapper pose={isOpen ? "open" : "closed"}>
       {/* <Hero isOpen={isOpen} /> */}
       <CarouselTwo />
+      <div className="down-arrow"> <Next /> </div>
       <HowItWorks />
       <Benefits />
       <Pricing />

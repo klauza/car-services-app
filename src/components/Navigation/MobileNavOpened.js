@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import posed from 'react-pose';
 import { NavLink } from 'react-router-dom';
 import { background } from '../../media';
-import { Home, Facebook } from '../../Icons';
+import { Home, Facebook, HelpWebButton } from '../../Icons';
 
 // CONTAINER
 const MMenuPosed = posed.div({
@@ -96,17 +96,27 @@ const ModalLinks = styled(ModalLinksPosed)`
     display: flex; flex-direction: column;
     
     a{
-      font-size: 1.65em;
+      font-size: 1.3em;
       color: #fff;
       text-decoration: none;
       background: #545454;
       line-height: 50px;
       
       display: flex; flex-direction: row;
+      &:nth-child(1) svg{
+        fill: #fff;
+      }
+      &:nth-child(2) svg{
+        fill: #000;
+      }
+      span{
+        margin-left: 10px;
+      }
     }
     svg{
       margin: 5px;
-      width: 40px; height: 40px;
+      width: 35px; height: 35px;
+
     }
     a:not(:nth-child(3)){
       border-bottom: 1px solid #707070;
@@ -155,9 +165,9 @@ const MobileNavOpened = ({menuOpen, openMobileMenu}) => {
         <ModalImage><img src={background} alt=""/></ModalImage>
 
         <ModalLinks>
-          <NavLink to="/" onTouchEnd={openMobileMenu}> <Home/> <span>Home</span> </NavLink>
-          <NavLink to="/about-website" onTouchEnd={openMobileMenu}> <span>About</span></NavLink>
+          <NavLink to="/" onTouchEnd={openMobileMenu}> <Home/> <span>Back to Home</span> </NavLink>
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><Facebook/> <span>Facebook</span> </a>
+          <NavLink to="/about-website" onTouchEnd={openMobileMenu}> <HelpWebButton /> <span>About website</span></NavLink>
           
         </ModalLinks>
         <Dot />

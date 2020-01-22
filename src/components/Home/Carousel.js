@@ -3,6 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import styled from 'styled-components';
 import { carTint1, carTint2, carWindow1, carWindow2, carouselEngine, carouselHeadlights, carbonCleanImage } from '../../media';
+import { NavLink } from 'react-router-dom';
 
 const Content = styled.div`
   position: relative;
@@ -12,7 +13,11 @@ const Content = styled.div`
   /* CARBON CLEAN */
   .carbon-header, .header-screen{
     color: #fff;
-    font-size: 2em;
+    text-shadow: 2px 2px 2px #000;
+    letter-spacing: 5px;
+    font-size: 3em;
+    font-family: 'Fredoka One', cursive;
+    text-transform: uppercase;
     position: absolute;
     left: 50%; transform: translateX(-50%);
     bottom: 0%;
@@ -20,7 +25,7 @@ const Content = styled.div`
     width: 100%;
     @media(max-width: 768px){
       margin-bottom: 230px;
-      
+      font-size: 2em;
     }
   }
   .header-screen{
@@ -37,7 +42,7 @@ const Content = styled.div`
     height: auto;
 
     padding: 10px;
-    background: rgba(0,0,0,.5);
+    background: rgba(0,0,0,.7);
     display: flex; flex-direction: column;
     img{
       width: 100%;
@@ -52,10 +57,18 @@ const Content = styled.div`
       font-size: 14px;
     }
     button{
-      padding: 5px 5px;
-      width: 120px;
-      display: block;
+      /* padding: 5px 5px; */
+      /* width: 120px; */
+      /* display: block; */
       margin: 10px auto;
+
+      border: 1px solid #fff;
+      border-radius: 25px;
+      color: #fff;
+      background: #686B09;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
     }
     @media(max-width: 768px){
       width: 95%;
@@ -80,35 +93,7 @@ const Content = styled.div`
     background: rgba(0,0,0,.35);
     display: flex; flex-direction: column; 
     align-items: flex-end;
-    @media(max-width: 768px){
-      transform: translate(-3%, -105%);
-      width: 90%;
-      display: grid;
-      grid-template-columns: 2fr 3fr;
-      grid-auto-rows: 130px;
-      align-items: center;
-      img{
-        width: 100%!important; height: 100%!important;
-        order: 1;
-      }
-      h1{
-        color: #fff;
-        order: 2;
-      }
-      button{
-        padding: 10px;
-        margin: 0 auto!important;
-        order: 3;
-      }
-      p{
-        margin-top: -60px;
-        font-size: 0.75em;
-        order: 4;
-      }
-      img:nth-child(1){
-        display: none;
-      }
-    }
+
     h1{
       @media(min-width: 768px){
         display: none;
@@ -129,10 +114,50 @@ const Content = styled.div`
       text-align: right;
     }
     button{
-      padding: 5px;
-      width: 120px;
-      display: block;
+      /* padding: 5px; */
+      /* width: 120px; */
+      /* display: block; */
       margin: 10px 0;
+      
+      border: 1px solid #fff;
+      border-radius: 25px;
+      color: #fff;
+      background: #686B09;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+    }
+    @media(max-width: 768px){
+      transform: translate(-3%, -105%);
+      width: 90%;
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      grid-auto-rows: 130px;
+      align-items: center;
+      img{
+        width: 100%!important; height: 100%!important;
+        order: 1;
+      }
+      h1{
+        color: #fff;
+        order: 2;
+        text-shadow: 2px 2px 2px #000;
+        font-size: 2em;
+        font-family: 'Fredoka One', cursive;
+      }
+      button{
+        margin: 0 auto!important;
+        order: 3;
+      }
+      p{
+        margin-top: -60px;
+        font-size: 0.75em;
+        order: 4;
+        text-align: left;
+      }
+      img:nth-child(1){
+        display: none;
+      }
     }
   }
 `;
@@ -146,8 +171,8 @@ const CarouselTwo = () => {
           <Content>
             <div className="img-div-1">
               <img src={carbonCleanImage} alt=""/>
-              <p>It’s a simple and safe process and requires no dismantling of engine parts or the use of harmful chemical products. We recommended using the HHO carbon cleaner 6.0 to do carbon cleaning service as part of your vehicle’s regular maintenance schedule.</p>
-              <button>Read more</button>
+              <p><strong>Starting from £59,99</strong>. It’s a simple and safe process. I recommended using the HHO carbon cleaner to do carbon cleaning service as part of your vehicle’s regular maintenance schedule.</p>
+              <NavLink exact to="/services/carbon-cleaning"><button>Read more</button></NavLink>
             </div>
             <h1 className="carbon-header">Carbon clean</h1>
           </Content>
@@ -159,7 +184,7 @@ const CarouselTwo = () => {
               <img src={carTint1} alt=""/>
               <img src={carWindow1} alt=""/>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dicta ipsam nobis delectus at? Maxime non ipsa veniam mollitia minima autem nostrum omnis ea laudantium.</p>
-              <button>Read more</button>
+              <NavLink exact to="/services/tinting"><button>Read more</button></NavLink>
               <h1 className="header-mobile">Tinting</h1>
             </div>
             <h1 className="header-screen">Tinting</h1>

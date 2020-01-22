@@ -62,6 +62,8 @@ const Wrapper = styled(WrapperPosed)`
     &-top{
       position: relative;
       margin-bottom :15px;
+      color: #fff;
+     
       &::after{
         content:'';
 
@@ -73,7 +75,7 @@ const Wrapper = styled(WrapperPosed)`
       
     }
     &-bot{
-
+  
     }
   }
 `;
