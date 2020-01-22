@@ -6,6 +6,7 @@ export { default as pugImage } from './images/pug.jpg';
 export { default as Logo } from './images/LOGOsm.png';
 export { default as LogoBlack } from './images/LOGO_black.png';
 export { default as benefits } from './images/benefits.JPG';
+export { default as diagnosticToolImage } from './images/diagnosticToolImage.jpg';
 
 // Carousel Main
 export { default as carTint1 } from './images/car-headlight-tint-1.jpg';
