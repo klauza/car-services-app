@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import HowItWorks from './HowItWorks';
 import Pricing from './Pricing';
 import Benefits from './Benefits';
+import DiagnosticTool from './DiagnosticTool';
 import CarouselTwo from './Carousel';
 import { Next } from '../../Icons';
 
@@ -69,12 +70,12 @@ const Home = () => {
       <CarouselTwo />
       <div className="down-arrow"> <Next /> </div>
       <HowItWorks />
-      <Benefits />
-      <Pricing />
+      {/* <Benefits /> */}
+      {/* <Pricing /> */}
       {/* <KeyServices /> */}
 
       <Separator />
-
+      <DiagnosticTool />
       <About />
       <ClientsReviews />
     </Wrapper>
