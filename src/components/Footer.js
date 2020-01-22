@@ -23,18 +23,18 @@ const AboutLinkDiv = styled.div`
   &::before{
     content: '';
     position: absolute;
-    left: 40%; top: 50%;
+    left: 30%; top: 50%;
     transform: translateX(-50%, -50%);
     background: linear-gradient(to right, rgba(0,0,0,0), rgba(255,255,255,1));
-    height: 1px; width: 100px;
+    height: 1px; width: 5vw;
   }
   &::after{
     content: '';
     position: absolute;
-    right: 40%; top: 50%;
+    right: 30%; top: 50%;
     transform: translateX(-50%, -50%);
     background: linear-gradient(to left, rgba(0,0,0,0), rgba(255,255,255,1));
-    height: 1px; width: 100px;
+    height: 1px; width: 5vw;
   }
   a{
     color: #fff;
@@ -57,7 +57,7 @@ const Footer = () => {
       <FooterWrap>
 
         <AboutLinkDiv>
-          <NavLink to="/about-website">About</NavLink>
+          <NavLink to="/about-website">About website</NavLink>
         </AboutLinkDiv>
 
         <Creator>
