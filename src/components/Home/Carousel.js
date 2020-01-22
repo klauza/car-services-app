@@ -90,10 +90,32 @@ const Content = styled.div`
     height: auto;
 
     padding: 10px;
-    background: rgba(0,0,0,.35);
+    /* background: rgba(0,0,0,.35); */
     display: flex; flex-direction: column; 
     align-items: flex-end;
 
+    &>*:not(:nth-child(1)){
+      z-index: 199;
+    }
+    &__backdrop{
+      /* display: block; */
+      /* width: 100%; 
+      height: 100%; */
+      position: absolute;
+      top: 5%; bottom: 7.5%; left: 10%; right: 1%;
+
+      &-content{
+        height: 100%; width: 100%;
+        /* background: rgba(0,0,0,.35); */
+        background: linear-gradient(to right, transparent, rgba(0,0,0,.35), rgba(0,0,0,.35));
+      }
+      @media(max-width: 768px){
+        top: 0%; bottom: 0%; left: 0%; right: 0%;
+        &-content{
+          background: rgba(0,0,0,.35);
+        }
+      }
+    }
     h1{
       @media(min-width: 768px){
         display: none;
@@ -134,6 +156,9 @@ const Content = styled.div`
       grid-template-columns: 2fr 3fr;
       grid-auto-rows: 130px;
       align-items: center;
+      .img-div-2__backdrop{
+        /* order: 0; */
+      }
       img{
         width: 100%!important; height: 100%!important;
         order: 1;
@@ -142,7 +167,6 @@ const Content = styled.div`
         color: #fff;
         order: 2;
         text-shadow: 2px 2px 2px #000;
-        font-size: 2em;
         font-family: 'Fredoka One', cursive;
       }
       button{
@@ -155,8 +179,31 @@ const Content = styled.div`
         order: 4;
         text-align: left;
       }
-      img:nth-child(1){
+      img.image-2{
         display: none;
+      }
+    }
+  }
+  /* SOLIDITY */
+  .img-div-3{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    margin: 0 auto 25px;
+    height: auto;
+
+    padding: 10px;
+    background: linear-gradient(to right, transparent, rgba(0,0,0,1), transparent);
+    h1{
+      text-transform: uppercase;
+      text-shadow: 2px 2px 2px #000;
+      font-size: 3em;
+      font-family: 'Fredoka One', cursive;
+      color: #fff;
+      @media(max-width: 768px){
+        font-size: 2em;
       }
     }
   }
@@ -165,7 +212,7 @@ const Content = styled.div`
 const CarouselTwo = () => {
   return (
   <div className="carousel-static-height">
-    <Carousel autoPlay={false} interval={3000} showThumbs={false} infiniteLoop={true}>
+    <Carousel autoPlay={true} interval={4000} showThumbs={false} infiniteLoop={true}>
       <div className="carousel-content">
           <img src={carouselEngine} alt="img" />
           <Content>
@@ -181,19 +228,26 @@ const CarouselTwo = () => {
           <img src={carouselHeadlights} alt="img" />
           <Content>
             <div className="img-div-2">
-              <img src={carTint1} alt=""/>
-              <img src={carWindow1} alt=""/>
+              <div className="img-div-2__backdrop">
+                <div className="img-div-2__backdrop-content" />
+              </div>
+              <img src={carTint1} alt="" className='image-1' />
+              <img src={carWindow1} alt="" className='image-2' />
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dicta ipsam nobis delectus at? Maxime non ipsa veniam mollitia minima autem nostrum omnis ea laudantium.</p>
               <NavLink exact to="/services/tinting"><button>Read more</button></NavLink>
-              <h1 className="header-mobile">Tinting</h1>
+              <h1 className="header-mobile">TINTING</h1>
             </div>
-            <h1 className="header-screen">Tinting</h1>
+            <h1 className="header-screen">TINTING</h1>
             
           </Content>
       </div>
       <div className="carousel-content">
-          <img src="https://images.pexels.com/photos/3484702/pexels-photo-3484702.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="img" />
-          <p className="legend">Legend 3</p>
+          <img style={{objectPosition: "50% 75%"}} src="https://images.pexels.com/photos/3484702/pexels-photo-3484702.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="img" />
+          <Content>
+            <div className="img-div-3">
+              <h1>I offer reliable and solid work</h1>
+            </div>
+          </Content>
       </div>
     </Carousel>
   </div>
