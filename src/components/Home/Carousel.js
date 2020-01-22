@@ -56,19 +56,35 @@ const Content = styled.div`
       color: #fff;
       font-size: 14px;
     }
+ 
     button{
       /* padding: 5px 5px; */
       /* width: 120px; */
       /* display: block; */
+      display: block;
       margin: 10px auto;
-
       border: 1px solid #fff;
       border-radius: 25px;
-      color: #fff;
       background: #686B09;
-      padding: 10px 20px;
       cursor: pointer;
       font-family: 'Montserrat', sans-serif;
+      transition: all 250ms ease;
+      a{
+        width: 100%; height: 100%; display: block;
+        padding: 10px 20px;
+        color: #fff;
+        text-decoration: none;
+        transition: all 250ms ease;
+      }
+      &:hover{
+        border: 1px solid #fff;
+        background: #ffc012;
+        transition: all 250ms ease;
+        a{
+          color: #000;
+          transition: all 250ms ease;
+        }
+      }
     }
     @media(max-width: 768px){
       width: 95%;
@@ -143,11 +159,26 @@ const Content = styled.div`
       
       border: 1px solid #fff;
       border-radius: 25px;
-      color: #fff;
       background: #686B09;
-      padding: 10px 20px;
       cursor: pointer;
       font-family: 'Montserrat', sans-serif;
+      transition: all 250ms ease;
+      a{
+        width: 100%; height: 100%; display: block;
+        padding: 10px 20px;
+        color: #fff;
+        text-decoration: none;
+        transition: all 250ms ease;
+      }
+      &:hover{
+        border: 1px solid #fff;
+        background: #ffc012;
+        transition: all 250ms ease;
+        a{
+          color: #000;
+          transition: all 250ms ease;
+        }
+      }
     }
     @media(max-width: 768px){
       transform: translate(-3%, -105%);
@@ -219,7 +250,7 @@ const CarouselTwo = () => {
             <div className="img-div-1">
               <img src={carbonCleanImage} alt=""/>
               <p><strong>Starting from £59,99</strong>. It’s a simple and safe process. I recommended using the HHO carbon cleaner to do carbon cleaning service as part of your vehicle’s regular maintenance schedule.</p>
-              <NavLink exact to="/services/carbon-cleaning"><button>Read more</button></NavLink>
+              <button><NavLink exact to="/services/carbon-cleaning">Read more</NavLink></button>
             </div>
             <h1 className="carbon-header">Carbon clean</h1>
           </Content>
@@ -234,7 +265,7 @@ const CarouselTwo = () => {
               <img src={carTint1} alt="" className='image-1' />
               <img src={carWindow1} alt="" className='image-2' />
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dicta ipsam nobis delectus at? Maxime non ipsa veniam mollitia minima autem nostrum omnis ea laudantium.</p>
-              <NavLink exact to="/services/tinting"><button>Read more</button></NavLink>
+              <button><NavLink exact to="/services/tinting">Read more</NavLink></button>
               <h1 className="header-mobile">TINTING</h1>
             </div>
             <h1 className="header-screen">TINTING</h1>
