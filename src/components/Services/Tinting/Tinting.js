@@ -3,7 +3,7 @@ import Hero from './Hero';
 import styled from 'styled-components';
 import GalleryContainer from '../GalleryContainer';
 import { Check, HelpWebButton, Reply, Camera, PoundSterling } from '../../../Icons';
-import { carbonCleanImage } from '../../../media';
+import { carWindow2, carTint2 } from '../../../media';
 import { MobileView, BrowserView } from "react-device-detect";
 import { NavLink } from 'react-router-dom';
 import history from '../../../history';
@@ -62,7 +62,18 @@ const About = styled.div`
   &>svg, &>path, &>circle{
     fill: #fff!important;
   }
-
+  .tinting-images{
+    width: 100%;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(auto, 250px));
+    grid-auto-rows: 200px;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 5px;
+    img{
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+  }
   .check-container{
     display: grid;
     grid-template-columns: auto auto;
@@ -80,16 +91,16 @@ const About = styled.div`
       height: auto;
       object-fit: cover;
     }
-    .check-column{
-      padding: 5px;
-      display: flex; flex-direction: column;
-      svg{
-        width: 25px; height: auto;
-      }
-      span{
-        @media(max-width: 768px){
-          font-size: 0.75em;
-        }
+  }
+  .check-column{
+    padding: 20px;
+    display: flex; flex-direction: column;
+    svg{
+      width: 25px; height: auto;
+    }
+    span{
+      @media(max-width: 768px){
+        font-size: 0.75em;
       }
     }
   }
@@ -179,18 +190,20 @@ const Tinting = () => {
         <Header>Tinting</Header>
         <About>
           <HelpWebButton />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia at atque adipisci quo accusamus eum dolores. Qui, impedit dicta dolorum tenetur eveniet sapiente natus quis?</p>
-          {/* <div className="check-container">
-            <img src={carbonCleanImage} alt=""/>
+          <p>Tinting allow you to completely change the appearance of your vehicle. In the UK, light tinting films are permitted. Films are very durable and they’re waterproof, which means that they can be washed and treated like any other surface on your vehicle. Light tinting films can last for years, however if you’re ready for a change they can simply be removed without damaging the lights.</p>
+          <div className="tinting-images">
+            <img src={carWindow2} alt="" />
+            <img src={carTint2} alt="" />
+          </div>
+          <p>Window tint is always applied to the inside of the car window.. In the UK, you can legally tint the rear windows. There are laws for the front door windows which should be no darker than a 70% tint.</p>
+          {/* <div className="check-container"> */}
+            {/* <img src={carbonCleanImage} alt=""/> */}
             <div className="check-column">
-              <div><Check /> <span>Removes carbon deposits from any engine type</span></div>
-              <div><Check /> <span>Restores engine performance</span></div>
-              <div><Check /> <span>Restores fuel consumption</span></div>
-              <div><Check /> <span>Prevents wear of expensive engine parts</span></div>
-              <div><Check /> <span>Reduces engine noise</span></div>
-              <div><Check /> <span>Increase engine lifespan</span></div>
+              <h3>Benefits:</h3>
+              <div><Check /> <span>Increase privacy</span></div>
+              <div><Check /> <span>Interior less visible for potential thieves</span></div>
             </div>
-          </div> */}
+          {/* </div> */}
         </About>
         <HeaderGallery>
           <Camera />
