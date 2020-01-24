@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from './Hero';
 import styled from 'styled-components';
+import posed from 'react-pose';
 import GalleryContainer from '../GalleryContainer';
 import { Check, HelpWebButton, Reply, Camera, PoundSterling } from '../../../Icons';
 import { carbonCleanImage } from '../../../media';
@@ -8,6 +9,16 @@ import { MobileView, BrowserView } from "react-device-detect";
 import { NavLink } from 'react-router-dom';
 import history from '../../../history';
 
+const ContainerPosed = posed.div({
+  initialPose: 'closed',
+  open: {
+    opacity: 1,
+  },
+  closed: {     
+    opacity: 0
+  }
+});
+const Container = styled(ContainerPosed)``;
 const Wrapper = styled.div`
 
   padding-bottom: 150px;
@@ -166,11 +177,21 @@ const BackButton = styled.button`
 `;
 
 const CarbonCleaning = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
 
+  React.useEffect(()=>{
+    // fire enter animations
+    setIsOpen(true);
 
+    // scroll Top every time we get to the page
+    window.scrollTo({  
+      top: 0,
+      behavior: 'auto'
+    })
+  }, [])
 
   return (
-    <React.Fragment>
+    <Container pose={isOpen ? "open" : "closed"}>
       <Hero />
       <Wrapper>
         
@@ -217,7 +238,7 @@ const CarbonCleaning = () => {
         </BrowserView>
         
       </Wrapper>
-    </React.Fragment>
+    </Container>
 
   )
 }
