@@ -4,7 +4,7 @@ import { aboutImagesPsd } from '../../media';
 
 
 const Wrapper = styled.div`
-  margin: 50px 0;
+  margin: 100px 0 200px;
   .about-section{
     text-align: center;
     height: 100%;
@@ -17,6 +17,14 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     border: 2px solid black;
+
+    h1{
+      color: var(--font-color-header);
+      font-family: var(--font-family-header);
+      text-shadow: var(--font-shadow-header);
+      font-size: var(--font-size-header);
+      letter-spacing: var(--font-spacing-header);
+    }
     p{
       text-align: center;
     }
@@ -57,9 +65,10 @@ const About = () => {
     
       <div className="about-section">
         <h1>About us</h1>
-        <p>We offer a vast amount of services, including engine bay cleaning, pipe cleaning. Check FACEBOOK.</p>
-
-        <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas incidunt dicta iste minus cupiditate optio!</h3>
+        <br/>
+        <h3>Best quality, flexible reachability, happy customer; those are the main traits I was thinking about while creating my services for you. </h3>
+        
+        <p>My business was created for daily drivers who value a reliable car. Thanks to the HHO cleaning your demands may come true.</p>
       </div>
 
       <ImagesContainer bg={aboutImagesPsd} />

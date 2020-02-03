@@ -1,11 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import posed from 'react-pose';
-import GalleryImage from './GalleryImage';
-import { pugImage } from '../../media';
 import { TurboEngine, Next, MechanicalEngineer, Engine, Heart, Headlight, Tint } from '../../Icons';
 import Hero from './Hero';
-import GalleryContainer from './GalleryContainer';
 import { NavLink } from 'react-router-dom';
 
 import './ImageGallery.scss';
@@ -104,111 +101,6 @@ const Wrapper = styled.div`
 `;
 
 
-const Example = styled.div`
-  width: 320px;
-  height: 55px;
-  margin: 50px 0;
-  position: relative;
-  svg{
-    fill: #fff;
-    width: 50px; height: 50px;
-  }
-
-  div{
-    /* animation: example-animation 2s infinite; */
-    width: 230px;
-    height: 100%;
-    background: rgba(0,0,0,.65);
-    background: linear-gradient(to right, #000, rgba(0,0,0,.05) );
-    /* inear-gradient(to bottom, #e66465, #9198e5); */
-    position: absolute; top: 0px;
-    z-index: 2;
-  }
-  p{
-    /* position: absolute; top: 0; */
-    margin-left: 90px;
-    padding: 15px 5px;
-    text-align: left;
-    z-index: 3;
-  }
-
-  /* @keyframes example-animation {
-    0%{
-      opacity: 0;
-      width: 0px;
-    }
-    25%{
-      opacity: 1;
-    }
-    49.9%{
-      width: 230px;
-    }
-    100%{
-      width: 0px;
-    }
-  } */
-`;
-
-const ServicesGallery = styled.div`
-  display: grid;
-  grid-gap: 10px;
-  /* position: relative; */
-
-  /* grid-template-columns: repeat(4, 1fr); */
-  /* grid-template-rows: repeat(3, 1fr); */
-
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-auto-rows: 200px;
-  grid-auto-flow: dense;
-
-  margin: 0 15px;
-
-  /* &::before {
-    content: '';
-    width: 0;
-    padding-bottom: 100%;
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
-  } */
-
-
-  .services-image-gallery{
-    &-1{
-      grid-column: span 2;
-      /* grid-row: 1 / 2; */
-      /* grid-column: 1 / 2; */
-    }
-    &-2{
-      grid-row: span 2;
-      /* grid-row: 1 / 2; */
-      /* grid-column: 2 / 4; */
-    }
-    &-3{
-      /* grid-row: 1 / 2; */
-      /* grid-column: 4 / 5; */
-    }
-    &-4{
-      grid-column: span 2;
-      /* grid-row: 2 / 4; */
-      /* grid-column: 1 / 3; */
-    }
-    &-5{
-      /* grid-row: 2 / 3; */
-      /* grid-column: 3 / 4; */
-    }
-    &-6{
-      /* grid-row: span 2; */
-      /* grid-column: span 2; */
-      /* grid-row: 2 / 3; */
-      /* grid-column: 4 / 5; */
-    }
-    &-7{
-      /* grid-row: span 2; */
-      /* grid-row: 3 / 4; */
-      /* grid-column: 3 / 5; */
-    }
-  }
-`;
 
 const Backdrop = styled.div`
   display: ${props => props.showBackdrop ? ("unset") : ("none")};
@@ -221,7 +113,6 @@ const Backdrop = styled.div`
 
 const Services = () => {
 
-  const [showBackdrop, setShowBackdrop] = React.useState(false);
   const [isOpen, setIsOpen] = React.useState(false); // modal open ? "animationStart" :"null"
 
   React.useEffect(()=>{
@@ -235,36 +126,6 @@ const Services = () => {
     })
   }, [])
 
-  const imgDb = [
-    {
-      id: 1,
-      img: pugImage
-    },
-    {
-      id: 2,
-      img: pugImage
-    },
-    {
-      id: 3,
-      img: pugImage
-    },
-    {
-      id: 4,
-      img: pugImage
-    },
-    {
-      id: 5,
-      img: pugImage
-    },
-    {
-      id: 6,
-      img: pugImage
-    },
-    {
-      id: 7,
-      img: pugImage
-    }
-  ]
 
   return (
     <Container pose={isOpen ? "open" : "closed"}>
@@ -291,27 +152,6 @@ const Services = () => {
           </div>
         </NavLink>
 
-
-
-
-        {/* <Example>
-          <p>See examples of our work</p>
-          <div>
-            Turbo svg <TurboEngine />
-            Mechanic svg <MechanicalEngineer />
-            Home: <Home />
-          </div>
-        </Example> */}
-
-        {/* <Backdrop showBackdrop={showBackdrop} /> */}
-
-        {/* <GalleryContainer /> */}
-
-        {/* <ServicesGallery>
-
-          {imgDb.map(img => <GalleryImage key={img.id} showBackdrop={showBackdrop} setShowBackdrop={setShowBackdrop} img={img} /> )}
-          
-        </ServicesGallery> */}
 
       </Wrapper>
     </Container>

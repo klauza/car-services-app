@@ -39,7 +39,7 @@ const Separator = styled.div`
   width: 60%;
   max-width: 900px;
   height: 1px;
-  margin: 125px auto;
+  margin: 100px auto;
   background: linear-gradient(to right, 
     rgba(255,255,255,0),
     rgba(255,255,255,.5),
@@ -72,6 +72,9 @@ const Home = () => {
       <Separator />
 
       <DiagnosticTool />
+
+      <Separator />
+
       <About />
       <ClientsReviews />
       

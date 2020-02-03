@@ -1,9 +1,10 @@
 import React from 'react'
+import styled from 'styled-components';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import styled from 'styled-components';
-import { carTint1, carTint2, carWindow1, carWindow2, carouselEngine, carouselHeadlights, carbonCleanImage } from '../../media';
 import { NavLink } from 'react-router-dom';
+import { carTint1, carWindow1, carouselEngine, carouselHeadlights, carbonCleanImage } from '../../media';
+import { Button } from '../Reusable/Button';
 
 const Content = styled.div`
   position: relative;
@@ -161,7 +162,7 @@ const Content = styled.div`
       border-radius: 25px;
       background: #686B09;
       cursor: pointer;
-      font-family: 'Montserrat', sans-serif;
+      /* font-family: 'Montserrat', sans-serif; */
       transition: all 250ms ease;
       a{
         width: 100%; height: 100%; display: block;
@@ -169,6 +170,7 @@ const Content = styled.div`
         color: #fff;
         text-decoration: none;
         transition: all 250ms ease;
+        font-family: 'Montserrat', sans-serif;
       }
       &:hover{
         border: 1px solid #fff;
@@ -250,7 +252,7 @@ const CarouselTwo = () => {
             <div className="img-div-1">
               <img src={carbonCleanImage} alt=""/>
               <p><strong>Starting from £59,99</strong>. It’s a simple and safe process. I recommended using the HHO carbon cleaner to do carbon cleaning service as part of your vehicle’s regular maintenance schedule.</p>
-              <button><NavLink exact to="/services/carbon-cleaning">Read more</NavLink></button>
+              <NavLink exact to="/services/carbon-cleaning"><Button innerText="Read more" /></NavLink>
             </div>
             <h1 className="carbon-header">Carbon clean</h1>
           </Content>

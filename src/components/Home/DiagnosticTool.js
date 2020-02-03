@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { diagnosticToolImage, diagnosticToolPattern } from '../../media';
 
 const Wrapper = styled.div`
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   box-shadow: 0 0 25px -1px rgba(0,0,0,1);
   background: #454141;

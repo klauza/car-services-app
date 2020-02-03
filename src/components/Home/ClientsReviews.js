@@ -11,6 +11,12 @@ const Wrapper = styled.div`
   padding: 50px 15px;
   
   h1{
+    color: var(--font-color-header);
+    font-family: var(--font-family-header);
+    text-shadow: var(--font-shadow-header);
+    font-size: var(--font-size-header);
+    letter-spacing: var(--font-spacing-header);
+    
     margin-bottom: 25px;
   }
   

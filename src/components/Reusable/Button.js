@@ -11,7 +11,7 @@ const UIBtn1 = styled.button`
   
   cursor: pointer;
   position: relative;
-  transition: box-shadow 125ms ease;
+  transition: all 250ms ease;
 
   color: #fff;
   background-color: #969B00;
@@ -24,7 +24,7 @@ const UIBtn1 = styled.button`
     background-color: lightgrey;
   }
   &:active{
-    transition: box-shadow 125ms ease;
+    transition: all 250ms ease;
     box-shadow: 0 3px 12px -1px rgba(0,0,0,.7);
   }
   
