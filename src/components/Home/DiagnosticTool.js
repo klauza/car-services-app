@@ -6,8 +6,8 @@ const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
   box-shadow: 0 0 25px -1px rgba(0,0,0,1);
-  /* background: rgba(84, 84, 84, 1); */
-  background: linear-gradient(150deg, rgba(84, 84, 84, 1), rgba(46, 46, 46, 1));
+  background: #454141;
+  /* background: linear-gradient(150deg, rgba(84, 84, 84, 1), rgba(46, 46, 46, 1)); */
   /* background: url(${diagnosticToolPattern}) repeat; */
   position: relative;
   .front{
@@ -60,7 +60,7 @@ const DiagnosticTool = () => {
   return (
     <Wrapper>
       <div className="front">
-        <p>Free diagnostic tool test along any of my service!!</p>
+        <p>Free diagnostic tool test along any of service!!</p>
       </div>
       <div className="back">
         <img src={diagnosticToolImage} alt="" />

@@ -1,13 +1,9 @@
 import React from 'react';
 import About from './About';
-import Hero from './Hero';
-import KeyServices from './KeyServices';
 import ClientsReviews from './ClientsReviews';
 import posed from 'react-pose';
 import styled from 'styled-components';
 import HowItWorks from './HowItWorks';
-import Pricing from './Pricing';
-import Benefits from './Benefits';
 import DiagnosticTool from './DiagnosticTool';
 import CarouselTwo from './Carousel';
 import { Next } from '../../Icons';
@@ -68,18 +64,17 @@ const Home = () => {
 
   return (
     <Wrapper pose={isOpen ? "open" : "closed"}>
-      {/* <Hero isOpen={isOpen} /> */}
+
       <CarouselTwo />
       <div className="down-arrow"> <Next /> </div>
       <HowItWorks />
-      {/* <Benefits /> */}
-      {/* <Pricing /> */}
-      {/* <KeyServices /> */}
 
       <Separator />
+
       <DiagnosticTool />
       <About />
       <ClientsReviews />
+      
     </Wrapper>
   )
 }
