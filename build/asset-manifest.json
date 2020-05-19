@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e235e5ea.chunk.css",
+    "main.js": "/static/js/main.948c082e.chunk.js",
+    "main.js.map": "/static/js/main.948c082e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.10ba5c96.js",
+    "runtime-main.js.map": "/static/js/runtime-main.10ba5c96.js.map",
+    "static/css/2.d409d1d9.chunk.css": "/static/css/2.d409d1d9.chunk.css",
+    "static/js/2.6f9b6fda.chunk.js": "/static/js/2.6f9b6fda.chunk.js",
+    "static/js/2.6f9b6fda.chunk.js.map": "/static/js/2.6f9b6fda.chunk.js.map",
+    "customWorker.js": "/customWorker.js",
+    "index.html": "/index.html",
+    "precache-manifest.c14a8236f5c5590a838baa65a788396f.js": "/precache-manifest.c14a8236f5c5590a838baa65a788396f.js",
+    "static/css/2.d409d1d9.chunk.css.map": "/static/css/2.d409d1d9.chunk.css.map",
+    "static/css/main.e235e5ea.chunk.css.map": "/static/css/main.e235e5ea.chunk.css.map",
+    "static/js/2.6f9b6fda.chunk.js.LICENSE.txt": "/static/js/2.6f9b6fda.chunk.js.LICENSE.txt",
+    "static/media/LOGO_black.png": "/static/media/LOGO_black.8e9cabe9.png",
+    "static/media/about-images-psd.jpg": "/static/media/about-images-psd.77eb3f1b.jpg",
+    "static/media/background.jpeg": "/static/media/background.d8531f82.jpeg",
+    "static/media/benefits.JPG": "/static/media/benefits.e187d621.JPG",
+    "static/media/box-services-image.jpg": "/static/media/box-services-image.73c0cea9.jpg",
+    "static/media/car-headlight-tint-1.jpg": "/static/media/car-headlight-tint-1.bcc5fb64.jpg",
+    "static/media/car-headlight-tint-2.jpg": "/static/media/car-headlight-tint-2.2b3c829d.jpg",
+    "static/media/car-window-tint-1.jpg": "/static/media/car-window-tint-1.4d549777.jpg",
+    "static/media/car-window-tint-2.jpg": "/static/media/car-window-tint-2.74a8c846.jpg",
+    "static/media/carousel-engine.jpeg": "/static/media/carousel-engine.cd0c7410.jpeg",
+    "static/media/carousel-headlightss.jpeg": "/static/media/carousel-headlightss.408004ce.jpeg",
+    "static/media/contactBg.jpeg": "/static/media/contactBg.edd8af3c.jpeg",
+    "static/media/diagnosticToolImage.jpg": "/static/media/diagnosticToolImage.ed28bcf2.jpg",
+    "static/media/hero-carbon-clean.jpg": "/static/media/hero-carbon-clean.9cbc6edb.jpg",
+    "static/media/pug.jpg": "/static/media/pug.a7cb8524.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.10ba5c96.js",
+    "static/css/2.d409d1d9.chunk.css",
+    "static/js/2.6f9b6fda.chunk.js",
+    "static/css/main.e235e5ea.chunk.css",
+    "static/js/main.948c082e.chunk.js"
+  ]
+}
