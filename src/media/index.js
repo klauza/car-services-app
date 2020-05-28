@@ -18,3 +18,17 @@ export { default as carWindow2 } from './images/car-window-tint-2.jpg';
 export { default as carouselEngine } from './images/carousel-engine.jpeg';
 export { default as carouselHeadlights } from './images/carousel-headlightss.jpeg';
 export { default as carbonCleanImage } from './images/hero-carbon-clean.jpg';
+
+// service gallery images
+export { default as tint_1 } from './gallery_images/tint_1.jpg';
+export { default as tint_2 } from './gallery_images/tint_2.jpg';
+export { default as tint_3 } from './gallery_images/tint_3.jpg';
+export { default as hho_1 } from './gallery_images/hho_1.jpg';
+export { default as hho_2 } from './gallery_images/hho_2.jpg';
+export { default as hho_3 } from './gallery_images/hho_3.jpg';
+export { default as tint_1_sm } from './gallery_images/tint_1_sm.jpg';
+export { default as tint_2_sm } from './gallery_images/tint_2_sm.jpg';
+export { default as tint_3_sm } from './gallery_images/tint_3_sm.jpg';
+export { default as hho_1_sm } from './gallery_images/hho_1_sm.jpg';
+export { default as hho_2_sm } from './gallery_images/hho_2_sm.jpg';
+export { default as hho_3_sm } from './gallery_images/hho_3_sm.jpg';

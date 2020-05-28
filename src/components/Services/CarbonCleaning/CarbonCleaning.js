@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import posed from 'react-pose';
 import GalleryContainer from '../GalleryContainer';
 import { Check, HelpWebButton, Reply, Camera, PoundSterling } from '../../../Icons';
-import { carbonCleanImage } from '../../../media';
+import { carbonCleanImage, hho_1, hho_2, hho_3, hho_1_sm, hho_2_sm, hho_3_sm } from '../../../media';
 import { MobileView, BrowserView } from "react-device-detect";
 import { NavLink } from 'react-router-dom';
 import history from '../../../history';
@@ -176,6 +176,21 @@ const BackButton = styled.button`
   }
 `;
 
+const images = [
+  {
+    original: hho_1,
+    thumbnail: hho_1_sm,
+  },
+  {
+    original: hho_2,
+    thumbnail: hho_2_sm,
+  },
+  {
+    original: hho_3,
+    thumbnail: hho_3_sm,
+  },
+];
+
 const CarbonCleaning = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -222,7 +237,7 @@ const CarbonCleaning = () => {
         </HeaderGallery>
 
         <div className="gallery-wrapper">
-          <GalleryContainer />
+          <GalleryContainer images={images} />
         </div>
 
         <Pricing>

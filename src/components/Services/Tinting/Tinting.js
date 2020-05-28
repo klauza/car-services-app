@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import posed from 'react-pose';
 import GalleryContainer from '../GalleryContainer';
 import { Check, HelpWebButton, Reply, Camera, PoundSterling } from '../../../Icons';
-import { carWindow2, carTint2 } from '../../../media';
+import { carWindow2, carTint2, tint_1, tint_2, tint_3, tint_1_sm, tint_2_sm, tint_3_sm } from '../../../media';
 import { MobileView, BrowserView } from "react-device-detect";
 import { NavLink } from 'react-router-dom';
 import history from '../../../history';
@@ -187,6 +187,22 @@ const BackButton = styled.button`
   }
 `;
 
+const images = [
+  {
+    original: tint_1,
+    thumbnail: tint_1_sm,
+  },
+  {
+    original: tint_2,
+    thumbnail: tint_2_sm,
+  },
+  {
+    original: tint_3,
+    thumbnail: tint_3_sm,
+  },
+];
+
+
 const Tinting = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -236,7 +252,7 @@ const Tinting = () => {
         </HeaderGallery>
 
         <div className="gallery-wrapper">
-          <GalleryContainer />
+          <GalleryContainer images={images} />
         </div>
 
         <Pricing>
