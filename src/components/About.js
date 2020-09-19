@@ -38,13 +38,13 @@ const About = () => {
       </Block>
 
       <Block>
-        <div>Website creator</div>
-        <p>Website created by <a href="https://www.linkedin.com/in/michal-klauza-b22318186/" target="_blank" rel="noopener noreferrer">Michal Klauza</a> © Copyright 2020</p>
+        <div>Website owner</div>
+        <p>Website is owned by Simon company © Copyright 2020</p>
       </Block>
 
       <Block>
         <div>Terms of conditions</div>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quas quis maiores fugit earum distinctio facilis et soluta dolor illum architecto voluptatem qui fugiat? Delectus, assumenda velit? Maxime commodi cupiditate distinctio hic non dolore aspernatur error impedit assumenda culpa, autem doloremque repellendus obcaecati harum ducimus ad recusandae sint quo nemo quisquam voluptates! Veniam, nisi modi!</p>
       </Block>
 
      </div>

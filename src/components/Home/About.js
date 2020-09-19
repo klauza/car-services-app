@@ -18,6 +18,10 @@ const Wrapper = styled.div`
     flex-direction: column;
     border: 2px solid black;
 
+    span{
+      font-weight: 900;
+    }
+
     h1{
       color: var(--font-color-header);
       font-family: var(--font-family-header);
@@ -66,8 +70,8 @@ const About = () => {
       <div className="about-section">
         <h1>About us</h1>
         <br/>
-        <h3>Best quality, flexible reachability, happy customer; those are the main traits I was thinking about while creating my services for you. </h3>
-        
+        <p><span>Best quality, flexible reachability, happy customer</span> - main traits which create my services for you.</p>
+        <span style={{marginTop: "10px"}} />
         <p>My business was created for daily drivers who value a reliable car. Thanks to the HHO cleaning your demands may come true.</p>
       </div>
 

@@ -61,7 +61,7 @@ const Footer = () => {
         </AboutLinkDiv>
 
         <Creator>
-          <p>Website created by Michal Klauza, Copyright © 2020</p>
+          <p>Website created by independent coder for Simon services company, Copyright © 2020</p>
         </Creator>
 
       </FooterWrap>

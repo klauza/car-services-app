@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   height: 90vh;
   width: 100%;
   box-shadow: 0 0 25px -1px rgba(0,0,0,1);
-  background: #454141;
+  background: #fff;
   /* background: linear-gradient(150deg, rgba(84, 84, 84, 1), rgba(46, 46, 46, 1)); */
   /* background: url(${diagnosticToolPattern}) repeat; */
   position: relative;
@@ -26,7 +26,7 @@ const Wrapper = styled.div`
       top: 40%;
     }
     p{
-      color: #fff;
+      color: #000;
     }
 
   }

@@ -35,6 +35,9 @@ const Content = styled.div`
     }
   }
   .img-div-1{
+    a{
+      text-decoration: none;
+    }
     position: absolute;
     top: 0%;
     right: 2.5%;
@@ -65,7 +68,7 @@ const Content = styled.div`
       display: block;
       margin: 10px auto;
       border: 1px solid #fff;
-      border-radius: 25px;
+      // border-radius: 25px;
       background: #686B09;
       cursor: pointer;
       font-family: 'Montserrat', sans-serif;
@@ -99,6 +102,9 @@ const Content = styled.div`
 
   /* TINTING */
   .img-div-2{
+    a{
+      text-decoration: none;
+    }
     position: absolute;
     top: 0%;
     right: 2.5%;
@@ -152,14 +158,15 @@ const Content = styled.div`
       color: #fff;
       text-align: right;
     }
+
     button{
       /* padding: 5px; */
       /* width: 120px; */
       /* display: block; */
       margin: 10px 0;
       
-      border: 1px solid #fff;
-      border-radius: 25px;
+      // border: 1px solid #fff;
+      // border-radius: 25px;
       background: #686B09;
       cursor: pointer;
       /* font-family: 'Montserrat', sans-serif; */
@@ -267,7 +274,7 @@ const CarouselTwo = () => {
               <img src={carTint1} alt="" className='image-1' />
               <img src={carWindow1} alt="" className='image-2' />
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dicta ipsam nobis delectus at? Maxime non ipsa veniam mollitia minima autem nostrum omnis ea laudantium.</p>
-              <button><NavLink exact to="/services/tinting">Read more</NavLink></button>
+              <NavLink exact to="/services/tinting"><Button innerText="Read more" /></NavLink>
               <h1 className="header-mobile">TINTING</h1>
             </div>
             <h1 className="header-screen">TINTING</h1>

@@ -18,6 +18,8 @@ const WrapperContainer = posed.div({
 });
 const Container = styled(WrapperContainer)``;
 const Wrapper = styled.div`
+
+
   .service-div{
     text-decoration: none;
     padding: 10px 2.5px;
@@ -68,15 +70,16 @@ const Wrapper = styled.div`
   width: 100%;
   /* height: 100vh; */
   margin: 0px auto;
+
+
   h1{
-    letter-spacing: 12px;
+    letter-spacing: var(--font-spacing-header);
     /* font-size: 3em; */
     text-align: center;
-    color: #969B00;
-    font-family: 'Trajan Pro', sans-serif;
-    letter-spacing: 7px;
-    font-size: 2.5em;
-    text-shadow: 2px 2px 2px rgba(0,0,0,1);
+    color: var(--font-color-header);
+    font-family: var(--font-family-header);
+    font-size: var(--font-size-header);
+    text-shadow: var(--font-shadow-header);
 
     /* &::after{
       content: '';
@@ -133,6 +136,14 @@ const Services = () => {
       <Wrapper >
         <h1>SERVICES</h1>
 
+        <NavLink className="service-div" exact to="/services/full-service" activeClassName="active">
+          <Next />
+          <h2>Full service</h2>
+          <div className="service-div-icons">
+            <Heart />
+          </div>
+        </NavLink>
+
         <NavLink className="service-div" exact to="/services/carbon-cleaning" activeClassName="active">
           <Next />
           <h2>Carbon cleaning</h2>
@@ -143,14 +154,49 @@ const Services = () => {
           </div>
         </NavLink>
 
+        <NavLink className="service-div" exact to="/services/remapping" activeClassName="active">
+          <Next />
+          <h2>Remapping</h2>
+          <div className="service-div-icons">
+            <Engine />
+          </div>
+        </NavLink>
+        
+        <NavLink className="service-div" exact to="/services/diagnostic" activeClassName="active">
+          <Next />
+          <h2>DPF</h2>
+          <div className="service-div-icons">
+          <TurboEngine />
+          </div>
+        </NavLink>
+
+        <br/>
+
         <NavLink className="service-div" exact to="/services/tinting" activeClassName="active">
           <Next />
-          <h2>Tinting</h2>
+          <h2>Body work</h2>
           <div className="service-div-icons">
             <Headlight />
             <Tint />
           </div>
         </NavLink>
+
+        <NavLink className="service-div" exact to="/services/diagnostic" activeClassName="active">
+          <Next />
+          <h2>Diagnostic services</h2>
+          <div className="service-div-icons">
+            <TurboEngine />
+          </div>
+        </NavLink>
+
+        <NavLink className="service-div" exact to="/services/air-conditioner-recharge" activeClassName="active">
+          <Next />
+          <h2>Air conditioner recharge</h2>
+          <div className="service-div-icons">
+            <TurboEngine />
+          </div>
+        </NavLink>
+
 
 
       </Wrapper>

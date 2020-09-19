@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { PhoneCall } from '../../Icons';
+import { Button } from '../Reusable/Button';
 
 const Wrapper = styled.div`
   max-width: 1080px;
@@ -20,6 +21,10 @@ const Wrapper = styled.div`
     margin: 50px 10px 100px;
   }
   &>div{
+    a{
+      text-decoration: none;
+    }
+
     padding: 10px;
     transform: rotateZ(1.75deg);
     margin-bottom: -35px;
@@ -30,19 +35,11 @@ const Wrapper = styled.div`
       }
     }
     button{
-      border: 1px solid #000;
-      border-radius: 25px;
-      background: #686B09;
-      box-shadow: 2px 2px 2px 0 rgba(0,0,0,1);
+      // background: #686B09;
+      // box-shadow: 2px 2px 2px 0 rgba(0,0,0,1);
       cursor: pointer;
 
-      a{
-        display: block;
-        width: 100%; height: 100%;
-        color: #fff;
-        padding: 10px 20px;
-        text-decoration: none;
-      }
+
       &:hover{
         border: 1px solid #fff;
         background: #ffc012;
@@ -85,7 +82,7 @@ const HowItWorks = () => {
         <p><strong style={{fontSize: "1.25em"}}>1.</strong> Call <PhoneCall /> me and get a quote. </p>
         <p><strong style={{fontSize: "1.25em"}}>2.</strong> If you come to my address, the price will be as described at the website, starting from £59,99</p>
         <p><strong style={{fontSize: "1.25em"}}>3.</strong> If you'd like me to come to your address, the total price may increase </p>
-        <button><NavLink exact to="/frequently-asked-questions"> Read FAQs </NavLink></button>
+        <NavLink exact to="/frequently-asked-questions"><Button innerText="Read FAQs" /></NavLink>
       </div>
     </Wrapper>
   )
