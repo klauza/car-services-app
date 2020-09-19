@@ -183,7 +183,7 @@ const Services = () => {
 
         <NavLink className="service-div" exact to="/services/aircon-recharge" activeClassName="active">
           <Next />
-          <h2>Air conditioner recharge</h2>
+          <h2>Aircon recharge</h2>
           <div className="service-div-icons">
             <TurboEngine />
           </div>

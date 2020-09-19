@@ -54,6 +54,15 @@ const Header = styled.h1`
     margin: 0 auto;
     transform: translateX(50px);
   }
+  &::before{
+    content:'';
+    display: block;
+    width: 250px;
+    height: 2px;
+    background-color: #fff;
+    margin: 0 33% 0;
+    transform: translateX(50px);
+  }
 `;
 
 const About = styled.div`
@@ -214,7 +223,7 @@ const CarbonCleaning = () => {
           <BackButton onTouchEnd={()=>{history.goBack(); }}> <Reply /> </BackButton>
         </MobileView>
 
-        <Header>Carbon cleaning</Header>
+        <Header>Full service</Header>
         <About>
           <HelpWebButton />
           <p>HHO carbon cleaner 6.0 consumes water by electrolysis, into its components; pure hydrogen and oxygen gases. This gas mixture is now commonly referred to as HHO. With the engine idling, HHO with cleaner agent are simply fed into the combustion chamber via the air intake where it burns, along with the fuel, to reform water vapour. The combination of hydrogen and oxygen enrichment create conditions for carbon to be gently burned off from piston crowns, valves and other components to form carbon dioxide and water vapour. In addition, the water vapour that is formed cannot condense due to the high temperature. So it effectively steam cleans the combustion chamber and associated components from the inside without any dismantling. The carbon deposits are progressively removed and pass out through the exhaust pipe. In the other hand, carbon cleaner keeps cleaning from entering into air intake to the exhaust pipe, what’s more, it forms a protective film to attached to engine parts. For a car engine the process is complete in just 20 minutes.</p>

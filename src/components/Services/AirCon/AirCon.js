@@ -54,6 +54,15 @@ const Header = styled.h1`
     margin: 0 auto;
     transform: translateX(50px);
   }
+  &::before{
+    content:'';
+    display: block;
+    width: 250px;
+    height: 2px;
+    background-color: #fff;
+    margin: 0 33% 0;
+    transform: translateX(50px);
+  }
 `;
 
 const About = styled.div`
@@ -227,7 +236,7 @@ const Tinting = () => {
           <BackButton onTouchEnd={()=>{history.goBack(); }}> <Reply /> </BackButton>
         </MobileView>
 
-        <Header>Tinting</Header>
+        <Header>Air conditioner recharge</Header>
         <About>
           <HelpWebButton />
           <p>Tinting allow you to completely change the appearance of your vehicle. In the UK, light tinting films are permitted. Films are very durable and they’re waterproof, which means that they can be washed and treated like any other surface on your vehicle. Light tinting films can last for years, however if you’re ready for a change they can simply be removed without damaging the lights.</p>
