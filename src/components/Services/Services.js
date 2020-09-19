@@ -162,7 +162,7 @@ const Services = () => {
           </div>
         </NavLink>
         
-        <NavLink className="service-div" exact to="/services/diagnostic" activeClassName="active">
+        <NavLink className="service-div" exact to="/services/dpf" activeClassName="active">
           <Next />
           <h2>DPF</h2>
           <div className="service-div-icons">
@@ -172,7 +172,7 @@ const Services = () => {
 
         <br/>
 
-        <NavLink className="service-div" exact to="/services/tinting" activeClassName="active">
+        <NavLink className="service-div" exact to="/services/body-work" activeClassName="active">
           <Next />
           <h2>Body work</h2>
           <div className="service-div-icons">
@@ -181,15 +181,7 @@ const Services = () => {
           </div>
         </NavLink>
 
-        <NavLink className="service-div" exact to="/services/diagnostic" activeClassName="active">
-          <Next />
-          <h2>Diagnostic services</h2>
-          <div className="service-div-icons">
-            <TurboEngine />
-          </div>
-        </NavLink>
-
-        <NavLink className="service-div" exact to="/services/air-conditioner-recharge" activeClassName="active">
+        <NavLink className="service-div" exact to="/services/aircon-recharge" activeClassName="active">
           <Next />
           <h2>Air conditioner recharge</h2>
           <div className="service-div-icons">

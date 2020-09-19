@@ -71,7 +71,7 @@ const Content = styled.div`
       // border-radius: 25px;
       background: #686B09;
       cursor: pointer;
-      font-family: 'Montserrat', sans-serif;
+      // font-family: 'Montserrat', sans-serif;
       transition: all 250ms ease;
       a{
         width: 100%; height: 100%; display: block;

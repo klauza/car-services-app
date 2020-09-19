@@ -125,8 +125,12 @@ const ScreenNav = () => {
               <li className="li-services-main">
                 <NavLink exact to="/services" activeClassName="active">Services</NavLink>
                 <ul className="ul-services">
+                  <li><NavLink exact to="/services/full-service" activeClassName="active">Full service</NavLink></li>
                   <li><NavLink exact to="/services/carbon-cleaning" activeClassName="active">Carbon cleaning</NavLink></li>
-                  <li><NavLink exact to="/services/tinting" activeClassName="active">Tinting</NavLink></li>
+                  <li><NavLink exact to="/services/remapping" activeClassName="active">Remapping</NavLink></li>
+                  <li><NavLink exact to="/services/dpf" activeClassName="active">DPF</NavLink></li>
+                  <li><NavLink exact to="/services/body-work" activeClassName="active">Body work</NavLink></li>
+                  <li><NavLink exact to="/services/aircon-recharge" activeClassName="active">Aircon recharge</NavLink></li>
                 </ul>
                 
               </li>
