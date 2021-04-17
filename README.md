@@ -1,12 +1,8 @@
 ## Docs
 
-*project name:* **sim_vices**
+*project name:* **simon-workshop-services**
 
-*project type:* **commercial**
-
-*for:* **Simon's Services co.**
-
-*description:* **reactJS based project made for business improvement**
+*description:* **project made for business improvement**
 
 *technologies:* **React (hooks + Redux) | styled components | Google Maps | Google analytics | Progressive Web App & Service Worker**
 
