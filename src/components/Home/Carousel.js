@@ -17,7 +17,8 @@ const Content = styled.div`
 
   /* CARBON CLEAN */
   .carbon-header,
-  .header-screen {
+  .header-screen,
+  .services-header {
     color: #fff;
     text-shadow: 2px 2px 2px #000;
     letter-spacing: 5px;
@@ -28,8 +29,15 @@ const Content = styled.div`
     left: 50%;
     transform: translateX(-50%);
     bottom: 0%;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    padding: 10px;
     width: 100%;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(0, 0, 0, 1),
+      transparent
+    );
     @media (max-width: 768px) {
       margin-bottom: 230px;
       font-size: 2em;
@@ -43,10 +51,10 @@ const Content = styled.div`
   .img-div-1 {
     a {
       text-decoration: none;
-      width: 200px;
+      width: 150px;
       align-self: center;
       button {
-        width: 100%;
+        width: 150px;
       }
     }
     position: absolute;
@@ -69,7 +77,7 @@ const Content = styled.div`
       padding: 5px;
       text-align: center;
       color: #fff;
-      font-size: 14px;
+      font-size: 1em;
     }
 
     @media (max-width: 768px) {
@@ -96,6 +104,7 @@ const Content = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
     a {
       text-decoration: none;
     }
@@ -152,6 +161,7 @@ const Content = styled.div`
       padding: 5px;
       color: #fff;
       text-align: right;
+      font-size: 1em;
     }
 
     @media (max-width: 768px) {
@@ -195,29 +205,43 @@ const Content = styled.div`
   }
   /* SOLIDITY */
   .img-div-3 {
+    a {
+      text-decoration: none;
+      width: 150px;
+      align-self: center;
+      button {
+        width: 150px;
+      }
+    }
     position: absolute;
-    bottom: 0%;
+    top: 0%;
     left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    margin: 0 auto 25px;
+    transform: translateY(-360%) translateX(-50%);
+    width: 40%;
     height: auto;
 
     padding: 10px;
-    background: linear-gradient(
-      to right,
-      transparent,
-      rgba(0, 0, 0, 1),
-      transparent
-    );
-    h1 {
-      text-transform: uppercase;
-      text-shadow: 2px 2px 2px #000;
-      font-size: 3em;
-      font-family: 'Fredoka One', cursive;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    p {
+      padding: 5px;
+      text-align: center;
       color: #fff;
-      @media (max-width: 768px) {
-        font-size: 2em;
+      font-size: 1em;
+    }
+
+    @media (max-width: 768px) {
+      width: 95%;
+      right: 50%;
+      transform: translate(50%, -105%);
+      img {
+        display: none;
       }
     }
   }
@@ -238,16 +262,13 @@ const CarouselTwo = () => {
             <div className="img-div-1">
               <img src={carbonCleanImage} alt="" />
               <p>
-                <strong>Starting from £59,99</strong>. It’s a simple and safe
-                process. I recommended using the HHO carbon cleaner to do carbon
-                cleaning service as part of your vehicle’s regular maintenance
-                schedule.
+                <strong>Starting from $79,99</strong>. the most frequently
+                chosen service. It’s a simple and safe process. I recommended
+                using the HHO carbon cleaner to do carbon cleaning service as
+                part of your vehicle’s regular maintenance schedule.
               </p>
               <NavLink exact to="/services/carbon-cleaning">
-                <Button
-                  style={{ width: '200px', float: 'right' }}
-                  innerText="Read more"
-                />
+                <Button innerText="Read more" />
               </NavLink>
             </div>
             <h1 className="carbon-header">Carbon clean</h1>
@@ -263,16 +284,18 @@ const CarouselTwo = () => {
               <img src={carTint1} alt="" className="image-1" />
               <img src={carWindow1} alt="" className="image-2" />
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam dicta ipsam nobis delectus at? Maxime non ipsa veniam
-                mollitia minima autem nostrum omnis ea laudantium.
+                Every vehicle needs a little of update to maintain it's best
+                performance. My various services let you not to be afraid before
+                choosing a longer distance to drive with your car. I do small
+                and big repairs as well as cosmetic upgrades for your belowed
+                vehicle.
               </p>
               <NavLink exact to="/services/tinting">
                 <Button innerText="Read more" />
               </NavLink>
-              <h1 className="header-mobile">TINTING</h1>
+              <h1 className="header-mobile">Minor repairs</h1>
             </div>
-            <h1 className="header-screen">TINTING</h1>
+            <h1 className="header-screen">Minor repairs</h1>
           </Content>
         </div>
         <div className="carousel-content">
@@ -283,8 +306,12 @@ const CarouselTwo = () => {
           />
           <Content>
             <div className="img-div-3">
-              <h1>I offer reliable and solid work</h1>
+              <p>Book now, don't wait!</p>
+              <NavLink exact to="/services">
+                <Button innerText="Book now" />
+              </NavLink>
             </div>
+            <h1 className="services-header">I offer reliable and solid work</h1>
           </Content>
         </div>
       </Carousel>

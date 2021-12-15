@@ -37,7 +37,6 @@ const UIBtn1 = styled.button`
 
   // link
   a {
-    width: 100%;
     text-decoration: none;
   }
 `;
