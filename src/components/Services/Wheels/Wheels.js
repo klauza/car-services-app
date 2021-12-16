@@ -12,6 +12,8 @@ import {
 } from '../../../Icons';
 import {
   carbonCleanImage,
+  wheels_1,
+  wheels_2,
   hho_1,
   hho_2,
   hho_3,
@@ -295,8 +297,8 @@ const CarbonCleaning = () => {
             vehicle and other drivers at risk.
           </p>
           <div className="check-container">
-            <img src={carbonCleanImage} alt="" />
-            <img src={carbonCleanImage} alt="" />
+            <img src={wheels_1} alt="" />
+            <img src={wheels_2} alt="" />
           </div>
         </About>
         <HeaderGallery>

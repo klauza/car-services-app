@@ -12,6 +12,8 @@ import {
 } from '../../../Icons';
 import {
   carbonCleanImage,
+  remap_1,
+  remap_2,
   hho_1,
   hho_2,
   hho_3,
@@ -283,7 +285,7 @@ const CarbonCleaning = () => {
             remapping:
           </p>
           <div className="check-container">
-            <img src={carbonCleanImage} alt="" />
+            <img src={remap_2} alt="" />
             <div className="check-column">
               <div>
                 <Check />{' '}

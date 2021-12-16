@@ -12,6 +12,7 @@ import {
 } from '../../../Icons';
 import {
   carbonCleanImage,
+  full_service,
   hho_1,
   hho_2,
   hho_3,
@@ -308,7 +309,7 @@ const CarbonCleaning = () => {
                 <Check /> <span>steering alignment</span>
               </div>
             </div>
-            <img src={carbonCleanImage} alt="" />
+            <img src={full_service} alt="" />
           </div>
         </About>
         <HeaderGallery>

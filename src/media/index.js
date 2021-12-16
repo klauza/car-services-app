@@ -36,3 +36,14 @@ export { default as tint_3_sm } from './gallery_images/tint_3_sm.jpg';
 export { default as hho_1_sm } from './gallery_images/hho_1_sm.jpg';
 export { default as hho_2_sm } from './gallery_images/hho_2_sm.jpg';
 export { default as hho_3_sm } from './gallery_images/hho_3_sm.jpg';
+
+export { default as aircon_1 } from './images/services/aircon-1.jpeg';
+export { default as aircon_2 } from './images/services/aircon-2.jpeg';
+export { default as body_work } from './images/services/body-work.jpeg';
+export { default as dpf } from './images/services/dpf.jpeg';
+export { default as full_service } from './images/services/full-service.jpeg';
+export { default as random_1 } from './images/services/random-1.jpeg';
+export { default as remap_1 } from './images/services/remap-1.jpeg';
+export { default as remap_2 } from './images/services/remap-2.jpeg';
+export { default as wheels_1 } from './images/services/wheels-1.jpeg';
+export { default as wheels_2 } from './images/services/wheels-2.jpeg';

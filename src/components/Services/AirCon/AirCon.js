@@ -13,6 +13,8 @@ import {
 import {
   carWindow2,
   carTint2,
+  aircon_1,
+  aircon_2,
   tint_1,
   tint_2,
   tint_3,
@@ -296,8 +298,8 @@ const Tinting = () => {
             struggles to cool the air and so works harder to try and produce
             cold air. This extra work uses more fuel.
             <div className="tinting-images">
-              <img src={carWindow2} alt="" />
-              <img src={carTint2} alt="" />
+              <img src={aircon_1} alt="" />
+              <img src={aircon_2} alt="" />
             </div>
             Similarly, it pays to recharge regularly if you don’t want to have
             to pay out for expensive air con parts and repairs later on. The
