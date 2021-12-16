@@ -36,7 +36,7 @@ const Wrapper = styled.div`
     text-align: left;
     border: 1px solid #000;
 
-    position: relative;
+    /* position: relative;
     &::before {
       content: '';
       position: absolute;
@@ -48,9 +48,9 @@ const Wrapper = styled.div`
       height: 50px;
       background: #fff;
       clip-path: polygon(50% 0, 65% 100%, 0 50%, 0 0);
-      /* border: 1px solid #000; */
+      border: 1px solid #000;
       outline: 1px solid #000;
-    }
+    } */
     .client-profile {
       width: 100%;
       height: 100%;
