@@ -11,14 +11,13 @@ import {
   PoundSterling,
 } from '../../../Icons';
 import {
-  carWindow2,
-  carTint2,
-  tint_1,
-  tint_2,
-  tint_3,
-  tint_1_sm,
-  tint_2_sm,
-  tint_3_sm,
+  carbonCleanImage,
+  hho_1,
+  hho_2,
+  hho_3,
+  hho_1_sm,
+  hho_2_sm,
+  hho_3_sm,
 } from '../../../media';
 import { MobileView, BrowserView } from 'react-device-detect';
 import { NavLink } from 'react-router-dom';
@@ -108,21 +107,7 @@ const About = styled.div`
   & > circle {
     fill: #fff !important;
   }
-  .tinting-images {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(auto, 250px));
-    grid-auto-rows: 200px;
-    justify-content: center;
-    align-items: center;
-    grid-gap: 5px;
-    margin: 15px 0;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
+
   .check-container {
     background: linear-gradient(to right, #5a5a5a, #5a5a5a, rgba(0, 0, 0, 0));
     display: grid;
@@ -141,18 +126,18 @@ const About = styled.div`
       height: auto;
       object-fit: cover;
     }
-  }
-  .check-column {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    svg {
-      width: 25px;
-      height: auto;
-    }
-    span {
-      @media (max-width: 768px) {
-        font-size: 0.75em;
+    .check-column {
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      svg {
+        width: 25px;
+        height: auto;
+      }
+      span {
+        @media (max-width: 768px) {
+          font-size: 0.75em;
+        }
       }
     }
   }
@@ -238,20 +223,20 @@ const BackButton = styled.button`
 
 const images = [
   {
-    original: tint_1,
-    thumbnail: tint_1_sm,
+    original: hho_1,
+    thumbnail: hho_1_sm,
   },
   {
-    original: tint_2,
-    thumbnail: tint_2_sm,
+    original: hho_2,
+    thumbnail: hho_2_sm,
   },
   {
-    original: tint_3,
-    thumbnail: tint_3_sm,
+    original: hho_3,
+    thumbnail: hho_3_sm,
   },
 ];
 
-const Tinting = () => {
+const CarbonCleaning = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   React.useEffect(() => {
@@ -280,38 +265,52 @@ const Tinting = () => {
           </BackButton>
         </MobileView>
 
-        <Header>Body work</Header>
+        <Header>Wheels</Header>
         <About>
           <HelpWebButton />
           <h1>About Service</h1>
           <p>
-            Tinting allow you to completely change the appearance of your
-            vehicle. In the UK, light tinting films are permitted. Films are
-            very durable and they’re waterproof, which means that they can be
-            washed and treated like any other surface on your vehicle. Light
-            tinting films can last for years, however if you’re ready for a
-            change they can simply be removed without damaging the lights.
-            <div className="tinting-images">
-              <img src={carWindow2} alt="" />
-              <img src={carTint2} alt="" />
-            </div>
-            Window tint is always applied to the inside of the car window.. In
-            the UK, you can legally tint the rear windows. There are laws for
-            the front door windows which should be no darker than a 70% tint.
-            {/* <div className="check-container"> */}
-            {/* <img src={carbonCleanImage} alt=""/> */}
+            HHO carbon cleaner 6.0 consumes water by electrolysis, into its
+            components; pure hydrogen and oxygen gases. This gas mixture is now
+            commonly referred to as HHO. With the engine idling, HHO with
+            cleaner agent are simply fed into the combustion chamber via the air
+            intake where it burns, along with the fuel, to reform water vapour.
+            The combination of hydrogen and oxygen enrichment create conditions
+            for carbon to be gently burned off from piston crowns, valves and
+            other components to form carbon dioxide and water vapour. In
+            addition, the water vapour that is formed cannot condense due to the
+            high temperature. So it effectively steam cleans the combustion
+            chamber and associated components from the inside without any
+            dismantling. The carbon deposits are progressively removed and pass
+            out through the exhaust pipe. In the other hand, carbon cleaner
+            keeps cleaning from entering into air intake to the exhaust pipe,
+            what’s more, it forms a protective film to attached to engine parts.
+            For a car engine the process is complete in just 20 minutes.
+          </p>
+          <div className="check-container">
+            <img src={carbonCleanImage} alt="" />
             <div className="check-column">
-              <h3>Benefits:</h3>
-              <div>
-                <Check /> <span>Increase privacy</span>
-              </div>
               <div>
                 <Check />{' '}
-                <span>Interior less visible for potential thieves</span>
+                <span>Removes carbon deposits from any engine type</span>
+              </div>
+              <div>
+                <Check /> <span>Restores engine performance</span>
+              </div>
+              <div>
+                <Check /> <span>Restores fuel consumption</span>
+              </div>
+              <div>
+                <Check /> <span>Prevents wear of expensive engine parts</span>
+              </div>
+              <div>
+                <Check /> <span>Reduces engine noise</span>
+              </div>
+              <div>
+                <Check /> <span>Increase engine lifespan</span>
               </div>
             </div>
-          </p>
-          {/* </div> */}
+          </div>
         </About>
         <HeaderGallery>
           <Camera />
@@ -325,8 +324,11 @@ const Tinting = () => {
         <Pricing>
           <PoundSterling />
           <h1>Pricing</h1>
-          <p>£ 19,99 for headlights</p>
-          <p>£ 29,99 for any window</p>
+          <p>£ 59,99 for first car</p>
+          <p>
+            £ 29,99 for any additional car in same address / at the same time
+          </p>
+          <p>+ Free diagnostic tool & error fix</p>
         </Pricing>
 
         <BrowserView style={{ marginTop: '25px' }}>
@@ -339,4 +341,4 @@ const Tinting = () => {
   );
 };
 
-export default Tinting;
+export default CarbonCleaning;

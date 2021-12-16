@@ -266,6 +266,21 @@ const Services = () => {
             <NavLink
               className="service-div"
               exact
+              to="/services/wheels"
+              activeClassName="active"
+            >
+              <Next />
+              <h2>Wheels</h2>
+              <div className="service-div-icons">
+                <TurboEngine />
+              </div>
+            </NavLink>
+          </UnorderedListItem>
+
+          <UnorderedListItem>
+            <NavLink
+              className="service-div"
+              exact
               to="/services/body-work"
               activeClassName="active"
             >
