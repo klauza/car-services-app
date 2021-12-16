@@ -10,6 +10,8 @@ export { default as LogoBlack } from './images/LOGO_black.png';
 export { default as benefits } from './images/benefits.jpg';
 export { default as diagnosticToolImage } from './images/diagnosticToolImage.jpg';
 
+// MAP
+export { default as mapImage } from './images/map.jpg';
 // pattern for Home/DiagnosticTool
 export { default as diagnosticToolPattern } from './images/repeated-square-dark.png';
 // Carousel Main
