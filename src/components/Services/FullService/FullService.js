@@ -324,7 +324,7 @@ const CarbonCleaning = () => {
         <Pricing>
           <PoundSterling />
           <h1>Pricing</h1>
-          <p>$ 99,99 - labour price for full service</p>
+          <p>$ 149,99 - full service</p>
           <p>$ 24,99 - MOT prep checks</p>
         </Pricing>
 
