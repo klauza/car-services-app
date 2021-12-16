@@ -270,44 +270,31 @@ const CarbonCleaning = () => {
           <HelpWebButton />
           <h1>About Service</h1>
           <p>
-            HHO carbon cleaner 6.0 consumes water by electrolysis, into its
-            components; pure hydrogen and oxygen gases. This gas mixture is now
-            commonly referred to as HHO. With the engine idling, HHO with
-            cleaner agent are simply fed into the combustion chamber via the air
-            intake where it burns, along with the fuel, to reform water vapour.
-            The combination of hydrogen and oxygen enrichment create conditions
-            for carbon to be gently burned off from piston crowns, valves and
-            other components to form carbon dioxide and water vapour. In
-            addition, the water vapour that is formed cannot condense due to the
-            high temperature. So it effectively steam cleans the combustion
-            chamber and associated components from the inside without any
-            dismantling. The carbon deposits are progressively removed and pass
-            out through the exhaust pipe. In the other hand, carbon cleaner
-            keeps cleaning from entering into air intake to the exhaust pipe,
-            what’s more, it forms a protective film to attached to engine parts.
-            For a car engine the process is complete in just 20 minutes.
+            Remapping a car is a quick and fairly cost-effective modification to
+            the microchip in your car’s Electronic Control Unit (ECU), to
+            overwrite the manufacturer’s factory settings. This enables your car
+            to perform at its optimum potential. Only turbo engines will fully
+            benefit from a remapping. If your car isn’t a turbo, a remap with
+            deliver negligible improvement in bhp.
+          </p>
+          <p>
+            The main reason drivers get an engine remapped, is to boost speed
+            and power. There are, however, other benefits of car engine
+            remapping:
           </p>
           <div className="check-container">
             <img src={carbonCleanImage} alt="" />
             <div className="check-column">
               <div>
                 <Check />{' '}
-                <span>Removes carbon deposits from any engine type</span>
+                <span>Economy - increase your car’s miles per litre</span>
               </div>
               <div>
-                <Check /> <span>Restores engine performance</span>
+                <Check />{' '}
+                <span>A better ride - accelerated engine response</span>
               </div>
               <div>
-                <Check /> <span>Restores fuel consumption</span>
-              </div>
-              <div>
-                <Check /> <span>Prevents wear of expensive engine parts</span>
-              </div>
-              <div>
-                <Check /> <span>Reduces engine noise</span>
-              </div>
-              <div>
-                <Check /> <span>Increase engine lifespan</span>
+                <Check /> <span>More horse power</span>
               </div>
             </div>
           </div>
@@ -324,11 +311,9 @@ const CarbonCleaning = () => {
         <Pricing>
           <PoundSterling />
           <h1>Pricing</h1>
-          <p>£ 59,99 for first car</p>
-          <p>
-            £ 29,99 for any additional car in same address / at the same time
-          </p>
-          <p>+ Free diagnostic tool & error fix</p>
+          <p>$ 99,99 - Eco</p>
+          <p>$ 99,99 - Performance</p>
+          <p>$ 129,99- Hybrid</p>
         </Pricing>
 
         <BrowserView style={{ marginTop: '25px' }}>

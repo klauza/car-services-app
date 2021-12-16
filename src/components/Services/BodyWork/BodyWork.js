@@ -285,12 +285,13 @@ const Tinting = () => {
           <HelpWebButton />
           <h1>About Service</h1>
           <p>
-            Tinting allow you to completely change the appearance of your
-            vehicle. In the UK, light tinting films are permitted. Films are
-            very durable and they’re waterproof, which means that they can be
-            washed and treated like any other surface on your vehicle. Light
-            tinting films can last for years, however if you’re ready for a
-            change they can simply be removed without damaging the lights.
+            Body work, scrathes, marks - there are four layers on a vehicle, the
+            outermost layer is the clear coat. The layer beneath is the actual
+            paint or base coat. Below the paint is primer and then bare metal.
+            The depth of the scratch will determine what repair procedure is
+            needed. Sometimes scratches are minor enough and can be removed
+            through buffing or wet sanding. However, deep scratches will involve
+            sanding, priming, and painting.
             <div className="tinting-images">
               <img src={carWindow2} alt="" />
               <img src={carTint2} alt="" />
@@ -301,13 +302,25 @@ const Tinting = () => {
             {/* <div className="check-container"> */}
             {/* <img src={carbonCleanImage} alt=""/> */}
             <div className="check-column">
-              <h3>Benefits:</h3>
-              <div>
-                <Check /> <span>Increase privacy</span>
-              </div>
+              <h3>Services:</h3>
+
               <div>
                 <Check />{' '}
-                <span>Interior less visible for potential thieves</span>
+                <span>
+                  Window tinting - Increase privacy and interior less visible
+                  for potential thieves
+                </span>
+              </div>
+
+              <div>
+                <Check /> <span>Minor auto body repairs</span>
+              </div>
+
+              <div>
+                <Check />{' '}
+                <span>
+                  Adding extras such as rims, side skirt spoiler, lamps
+                </span>
               </div>
             </div>
           </p>
@@ -325,8 +338,7 @@ const Tinting = () => {
         <Pricing>
           <PoundSterling />
           <h1>Pricing</h1>
-          <p>£ 19,99 for headlights</p>
-          <p>£ 29,99 for any window</p>
+          <p>need contact for details</p>
         </Pricing>
 
         <BrowserView style={{ marginTop: '25px' }}>

@@ -160,7 +160,7 @@ const UnorderedListItemPosed = posed.div({
   },
 });
 const UnorderedListItem = styled(UnorderedListItemPosed)`
-  width: 600px;
+  max-width: 600px;
   margin: 0 auto;
   transition: 250ms all ease;
   &:hover {
@@ -308,6 +308,7 @@ const Services = () => {
             </NavLink>
           </UnorderedListItem>
         </UnorderedList>
+        <Header>Booking</Header>
       </Wrapper>
     </Container>
   );
