@@ -285,22 +285,29 @@ const Tinting = () => {
           <HelpWebButton />
           <h1>About Service</h1>
           <p>
-            Tinting allow you to completely change the appearance of your
-            vehicle. In the UK, light tinting films are permitted. Films are
-            very durable and they’re waterproof, which means that they can be
-            washed and treated like any other surface on your vehicle. Light
-            tinting films can last for years, however if you’re ready for a
-            change they can simply be removed without damaging the lights.
+            There are many reasons to get your air conditioning recharged
+            besides the most obvious one being to keep you and your passengers
+            cool on journeys in hot weather (though we might add that leaving a
+            box of lollies in a non-air conditioned car for too long can be very
+            upsetting for kids and grown-ups alike). If you like getting the
+            most out of your tank of fuel then you might be interested to know
+            that recharging your air con increases fuel efficiency. This is
+            because when your air con refrigerant is low, the air con system
+            struggles to cool the air and so works harder to try and produce
+            cold air. This extra work uses more fuel.
             <div className="tinting-images">
               <img src={carWindow2} alt="" />
               <img src={carTint2} alt="" />
             </div>
-            Window tint is always applied to the inside of the car window.. In
-            the UK, you can legally tint the rear windows. There are laws for
-            the front door windows which should be no darker than a 70% tint.
+            Similarly, it pays to recharge regularly if you don’t want to have
+            to pay out for expensive air con parts and repairs later on. The
+            refrigerant used in your air con system is extremely cold and has
+            the added benefit of cooling down the air con compressor. Without
+            refrigerant, or if it were to run too low, the compressor would get
+            dangerously hot and fail.
             {/* <div className="check-container"> */}
             {/* <img src={carbonCleanImage} alt=""/> */}
-            <div className="check-column">
+            {/* <div className="check-column">
               <h3>Benefits:</h3>
               <div>
                 <Check /> <span>Increase privacy</span>
@@ -309,7 +316,7 @@ const Tinting = () => {
                 <Check />{' '}
                 <span>Interior less visible for potential thieves</span>
               </div>
-            </div>
+            </div> */}
           </p>
           {/* </div> */}
         </About>
@@ -325,8 +332,9 @@ const Tinting = () => {
         <Pricing>
           <PoundSterling />
           <h1>Pricing</h1>
-          <p>£ 19,99 for headlights</p>
-          <p>£ 29,99 for any window</p>
+          <p>$ 19,99 normal vehicle</p>
+          <p>$ 29,99 SUV</p>
+          <p>$ 39,99 transporters</p>
         </Pricing>
 
         <BrowserView style={{ marginTop: '25px' }}>

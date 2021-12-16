@@ -270,46 +270,33 @@ const CarbonCleaning = () => {
           <HelpWebButton />
           <h1>About Service</h1>
           <p>
-            HHO carbon cleaner 6.0 consumes water by electrolysis, into its
-            components; pure hydrogen and oxygen gases. This gas mixture is now
-            commonly referred to as HHO. With the engine idling, HHO with
-            cleaner agent are simply fed into the combustion chamber via the air
-            intake where it burns, along with the fuel, to reform water vapour.
-            The combination of hydrogen and oxygen enrichment create conditions
-            for carbon to be gently burned off from piston crowns, valves and
-            other components to form carbon dioxide and water vapour. In
-            addition, the water vapour that is formed cannot condense due to the
-            high temperature. So it effectively steam cleans the combustion
-            chamber and associated components from the inside without any
-            dismantling. The carbon deposits are progressively removed and pass
-            out through the exhaust pipe. In the other hand, carbon cleaner
-            keeps cleaning from entering into air intake to the exhaust pipe,
-            what’s more, it forms a protective film to attached to engine parts.
-            For a car engine the process is complete in just 20 minutes.
+            Your brakes are an integral part of the safety system in your car.
+            They are often the first thing checked in an MOT and are necessary
+            for the basic function of a car or van. With all this being said,
+            brakes must be maintained and replaced when necessary.
+          </p>
+          <p>
+            Although the average life expectancy of a brake pad will differ
+            depending on the vehicle, they’re likely to remain intact for
+            somewhere between 30,000 and 35,000 miles. This figure can also be
+            extended or shortened based on where the car is being driven, as the
+            brakes are likely to be used more in cities and towns than they
+            would in the countryside.
+          </p>
+          <p>
+            Anyone can do this type of check, but it would be strongly advised
+            to avoid the temptation to change the brake pads yourself. The
+            process of doing this requires the vehicle to be elevated, technical
+            procedures to be carried out and inspections to be made that only a
+            professional would be equipped to do. After the brake pads are
+            changed, you need to know that your braking system is going to work,
+            but by doing it yourself, you won’t have the guarantee of a
+            professional and you could be putting yourself, anyone else in the
+            vehicle and other drivers at risk.
           </p>
           <div className="check-container">
             <img src={carbonCleanImage} alt="" />
-            <div className="check-column">
-              <div>
-                <Check />{' '}
-                <span>Removes carbon deposits from any engine type</span>
-              </div>
-              <div>
-                <Check /> <span>Restores engine performance</span>
-              </div>
-              <div>
-                <Check /> <span>Restores fuel consumption</span>
-              </div>
-              <div>
-                <Check /> <span>Prevents wear of expensive engine parts</span>
-              </div>
-              <div>
-                <Check /> <span>Reduces engine noise</span>
-              </div>
-              <div>
-                <Check /> <span>Increase engine lifespan</span>
-              </div>
-            </div>
+            <img src={carbonCleanImage} alt="" />
           </div>
         </About>
         <HeaderGallery>
@@ -324,11 +311,12 @@ const CarbonCleaning = () => {
         <Pricing>
           <PoundSterling />
           <h1>Pricing</h1>
-          <p>£ 59,99 for first car</p>
-          <p>
-            £ 29,99 for any additional car in same address / at the same time
-          </p>
-          <p>+ Free diagnostic tool & error fix</p>
+          <p>$ 49,99 - 1 tyre replacement</p>
+          <p>$ 149,99 - 4 tyres (set) replacement</p>
+          <p>$ 19,99 - 1 brake replacement</p>
+          <p>$ 69,99 - 4 brakes (set) replacement</p>
+          <p>$ 14,99 - 1 pad-brake replacement</p>
+          <p>$ 44,99 - 4 pad-brakes (set) replacement</p>
         </Pricing>
 
         <BrowserView style={{ marginTop: '25px' }}>

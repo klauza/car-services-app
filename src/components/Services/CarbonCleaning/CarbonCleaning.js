@@ -325,7 +325,7 @@ const CarbonCleaning = () => {
           <PoundSterling />
           <h1>Pricing</h1>
           <p>$ 59,99 for one car</p>
-          <p>£ 29,99 for any additional car in the same time</p>
+          <p>$ 29,99 for any additional car in the same time</p>
         </Pricing>
 
         <BrowserView style={{ marginTop: '25px' }}>
