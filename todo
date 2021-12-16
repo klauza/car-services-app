@@ -1,0 +1,4 @@
+- booking feature
+ + admin can add or delete meetings
+ + admin can block days off from work (out of service)
+ + to make a booking, customer needs to prior pay or make a call (to book manually) 
