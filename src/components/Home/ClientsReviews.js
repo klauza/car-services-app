@@ -30,11 +30,27 @@ const Wrapper = styled.div`
     max-width: 768px;
     border: 1px solid grey;
     /* height: 250px; */
-    margin: 10px auto;
+    margin: 30px auto;
     padding: 5px;
     align-items: center;
     text-align: left;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.75);
+    border: 1px solid #000;
+
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      right: -50px;
+      bottom: -50px;
+      transform: translateX(-50%) translateY(-50%);
+      display: block;
+      width: 50px;
+      height: 50px;
+      background: #fff;
+      clip-path: polygon(50% 0, 65% 100%, 0 50%, 0 0);
+      /* border: 1px solid #000; */
+      outline: 1px solid #000;
+    }
     .client-profile {
       width: 100%;
       height: 100%;
