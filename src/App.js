@@ -15,6 +15,7 @@ import AirCon from './components/Services/AirCon/AirCon';
 import Wheels from './components/Services/Wheels/Wheels';
 
 import Services from './components/Services/Services';
+import BookingSummary from './components/Services/BookingSummary';
 import Contact from './components/Contact/Contact';
 import FAQ from './components/FAQ/FAQ';
 
@@ -31,6 +32,7 @@ function App() {
         <Route exact path="/" component={Home} />
 
         <Route exact path="/services" component={Services} />
+        <Route exact path="/booking-summary" component={BookingSummary} />
         <Route exact path="/services/full-service" component={FullService} />
         <Route
           exact
