@@ -10,63 +10,72 @@ const Wrapper = styled.div`
   /* background: linear-gradient(150deg, rgba(84, 84, 84, 1), rgba(46, 46, 46, 1)); */
   /* background: url(${diagnosticToolPattern}) repeat; */
   position: relative;
-  .front{
-    position: absolute;
-    top: 50%;
-    margin-left: 20px;
-    font-size: 1.7em;
-    transform: translateY(-50%);
-    max-width: 50%;
-    @media(max-width: 768px){
-      /* max-width:  */
-      margin-left: 5px;
-      font-size: 1.5em;
-    }
-    @media(max-width: 360px){
-      top: 40%;
-    }
-    p{
-      color: #000;
-    }
 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media(max-width: 768px){
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
   }
-  .back{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%; height: 100%;
-    box-shadow: inset 0 0 25px -1px rgba(255,0,0,1);
-    img{
+
+  .left{
+    display: flex;
+    background: #969b00;
+    align-items: center;
+    &>div{
+      padding: 0 25px;
+      text-align: center;
+      h1{
+        font-size: 5.5em;
+        color: #fff;
+      }
+      p{
+        font-weight: 700;
+        font-size: 1.25em;
+      }
+
+    }
+    @media(max-width: 768px){
+      &>div{
+        margin: 0 auto;
+        padding: 10px 0;
+      }
+    }
+  }
+  .right{
+    background: orange;
+    &__image{
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
-    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-    opacity: 0.75;
-    &::after{
-      content: '';
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background: red;
-      z-index: 250;
-    }
-
   }
 `;
 
 const DiagnosticTool = () => {
   return (
     <Wrapper>
-      <div className="front">
-        <p>Free diagnostic tool test along any of service!!</p>
+      <div className="left">
+        <div>
+          <h1>FREE</h1>
+          <p>diagnostic tool test as addition for each service!</p>
+        </div>
       </div>
-      <div className="back">
-        <img src={diagnosticToolImage} alt="" />
+      <div className="right">
+        <div className="right__image">
+          <img src={diagnosticToolImage} alt="" />
+        </div>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default DiagnosticTool
+export default DiagnosticTool;

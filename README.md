@@ -1,20 +1,21 @@
 ## Docs
 
-*project name:* **simon-workshop-services**
+_project name:_ **car-services-app**
 
-*description:* **project made for business improvement**
+_description:_ **project made for business improvements**
 
-*technologies:* **React (hooks + Redux) | styled components | Google Maps | Google analytics | Progressive Web App & Service Worker**
+_technologies:_ **React | styled components | Google Maps | Google analytics | Progressive Web App & Service Worker**
 
 <br/>
 
 ## Dependencies
 
-- **react** ver. 16.12.0 
-- **styled-components** ver. 4.4.1 
-- **react-pose** ver. 4.0.10 
-- **history** ver. 4.10.1 
-
+| Name                        | version |
+| --------------------------- | ------- |
+| **react**                   | 16.12.0 |
+| **react-pose (deprecated)** | 4.0.10  |
+| **styled-components**       | 4.4.1   |
+| **history**                 | 4.10.1  |
 
 <br/>
 
@@ -29,4 +30,4 @@
 
 ## License
 
-**MIT license**
+**MIT**

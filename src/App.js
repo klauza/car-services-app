@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Router, Route, Switch } from 'react-router-dom';
 
 import history from './history';
 
@@ -12,8 +12,10 @@ import Remapping from './components/Services/Remapping/Remapping';
 import DPF from './components/Services/DPF/DPF';
 import BodyWork from './components/Services/BodyWork/BodyWork';
 import AirCon from './components/Services/AirCon/AirCon';
+import Wheels from './components/Services/Wheels/Wheels';
 
 import Services from './components/Services/Services';
+import BookingSummary from './components/Services/BookingSummary';
 import Contact from './components/Contact/Contact';
 import FAQ from './components/FAQ/FAQ';
 
@@ -30,10 +32,16 @@ function App() {
         <Route exact path="/" component={Home} />
 
         <Route exact path="/services" component={Services} />
+        <Route exact path="/booking-summary" component={BookingSummary} />
         <Route exact path="/services/full-service" component={FullService} />
-        <Route exact path="/services/carbon-cleaning" component={CarbonCleaning} />
+        <Route
+          exact
+          path="/services/carbon-cleaning"
+          component={CarbonCleaning}
+        />
         <Route exact path="/services/remapping" component={Remapping} />
         <Route exact path="/services/dpf" component={DPF} />
+        <Route exact path="/services/wheels" component={Wheels} />
 
         <Route exact path="/services/body-work" component={BodyWork} />
         <Route exact path="/services/aircon-recharge" component={AirCon} />
