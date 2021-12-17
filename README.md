@@ -1,3 +1,3 @@
 ## Docs
 
-[link](https://animated-business-app.netlify.app/)
+[link](https://car-services.netlify.app/)
