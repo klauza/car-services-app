@@ -18,6 +18,7 @@ const Booking = () => {
     price: null,
     paid: false,
   });
+  const [error, setError] = React.useState(false);
 
   useEffect(() => {
     if (newBooking.paid) {
@@ -126,8 +127,21 @@ const Booking = () => {
 
   // Save booking from useState
   const submitBooking = () => {
-    localStorage.setItem('booking', JSON.stringify(newBooking));
-    setIsOpen((prevState) => !prevState);
+    // check if empty logic
+    if (
+      !newBooking.reg ||
+      !newBooking.location ||
+      !newBooking.service ||
+      !newBooking.price
+    ) {
+      // Display Error!
+      setError(true);
+    } else {
+      // All good!
+      localStorage.setItem('booking', JSON.stringify(newBooking));
+      setIsOpen((prevState) => !prevState);
+      setError(false);
+    }
   };
 
   return (
@@ -325,7 +339,9 @@ const Booking = () => {
             </div>
           </div>
         </div>
-
+        {error && (
+          <div className="error-field">ERROR! Please fill all fields!</div>
+        )}
         <Button onClick={submitBooking} innerText="Book and Pay" />
       </BookingWrapper>
       <PayWrapper
