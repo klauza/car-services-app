@@ -9,6 +9,10 @@ import {
   Heart,
   Headlight,
   Tint,
+  Home,
+  Address,
+  PhoneCall,
+  Pin,
 } from '../../Icons';
 import Hero from './Hero';
 import { NavLink } from 'react-router-dom';
@@ -27,6 +31,10 @@ const WrapperContainer = posed.div({
 });
 const Container = styled(WrapperContainer)``;
 const Wrapper = styled.div`
+  .position-relative {
+    position: relative;
+    overflow: hidden;
+  }
   .service-div {
     text-decoration: none;
     padding: 10px 2.5px;

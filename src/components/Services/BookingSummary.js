@@ -25,6 +25,11 @@ const Container = styled(WrapperContainer)`
 
 const BookingSummary = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [isBooked] = React.useState(
+    localStorage.getItem('booking') !== null
+      ? JSON.parse(localStorage.getItem('booking')).paid
+      : false
+  );
 
   React.useEffect(() => {
     // fire enter animations
@@ -32,7 +37,11 @@ const BookingSummary = () => {
   }, []);
   return (
     <Container pose={isOpen ? 'open' : 'closed'}>
-      <h1>Thank you for your pay {':-]'}</h1>
+      {isBooked ? (
+        <h1>Thank you for your pay {':-]'}</h1>
+      ) : (
+        <h1>Please make a booking and pay for it.</h1>
+      )}
     </Container>
   );
 };
