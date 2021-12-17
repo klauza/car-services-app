@@ -14,6 +14,7 @@ import Hero from './Hero';
 import { NavLink } from 'react-router-dom';
 
 import './ImageGallery.scss';
+import Booking from './Booking';
 
 const WrapperContainer = posed.div({
   initialPose: 'closed',
@@ -309,6 +310,7 @@ const Services = () => {
           </UnorderedListItem>
         </UnorderedList>
         <Header>Booking</Header>
+        <Booking />
       </Wrapper>
     </Container>
   );
