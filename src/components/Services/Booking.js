@@ -36,6 +36,29 @@ const Booking = () => {
     let current = e.target.name;
     let value = e.target.value;
     setNewBooking((prevState) => ({ ...prevState, [current]: value }));
+
+    if (current === 'service') {
+      calculatePrice(value); // value = service name
+    }
+  };
+
+  // Calculate total price
+  const calculatePrice = (val) => {
+    let current = 'price';
+    let cena;
+    switch (val) {
+      case 'MOT':
+        cena = '15';
+        break;
+      case 'full_service':
+        cena = '149,99';
+        break;
+      case 'aircon':
+        cena = '25';
+        break;
+    }
+
+    setNewBooking((prevState) => ({ ...prevState, [current]: cena }));
   };
 
   return (
@@ -136,7 +159,7 @@ const Booking = () => {
       </div>
 
       {/* Add a service */}
-      <div className="grid">
+      {/* <div className="grid">
         <div className="grid-1">
           <div className="icon-box">
             <Heart />
@@ -147,7 +170,7 @@ const Booking = () => {
         <div className="grid-2">
           <div className="input-box"></div>
         </div>
-      </div>
+      </div> */}
 
       {/* total Price */}
       <div className="grid">
@@ -159,7 +182,9 @@ const Booking = () => {
         </div>
 
         <div className="grid-2">
-          <div className="input-box">$29,99</div>
+          <div className="input-box">
+            $ {newBooking.price !== null ? newBooking.price : '0'}
+          </div>
         </div>
       </div>
 
