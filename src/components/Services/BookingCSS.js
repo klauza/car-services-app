@@ -88,6 +88,7 @@ export const BookingWrapper = styled(PosedBookingWrapper)`
   button {
     margin-top: 55px;
   }
+
   .error-field {
     text-align: center;
     color: red;
