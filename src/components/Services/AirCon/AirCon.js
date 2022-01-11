@@ -70,15 +70,6 @@ const Header = styled.h1`
     margin: 0 auto;
     transform: translateX(50px);
   }
-  &::before {
-    content: '';
-    display: block;
-    width: 250px;
-    height: 2px;
-    background-color: #fff;
-    margin: 0 33% 0;
-    transform: translateX(50px);
-  }
 `;
 
 const About = styled.div`
