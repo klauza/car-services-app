@@ -61,14 +61,9 @@ const About = () => {
       <Block>
         <div>Terms of conditions</div>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
-          voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Reprehenderit, quas quis maiores fugit earum distinctio facilis et
-          soluta dolor illum architecto voluptatem qui fugiat? Delectus,
-          assumenda velit? Maxime commodi cupiditate distinctio hic non dolore
-          aspernatur error impedit assumenda culpa, autem doloremque repellendus
-          obcaecati harum ducimus ad recusandae sint quo nemo quisquam
-          voluptates! Veniam, nisi modi!
+          By using this website you agree to store cookies in your browser.
+          Thsese cookies are used to create an object necessary to make a
+          booking.
         </p>
       </Block>
     </div>
