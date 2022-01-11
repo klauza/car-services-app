@@ -262,7 +262,7 @@ const CarouselTwo = () => {
             <div className="img-div-1">
               <img src={carbonCleanImage} alt="" />
               <p>
-                <strong>Starting from $79,99</strong>. the most frequently
+                <strong>Starting from $59,99</strong>. the most frequently
                 chosen service. It’s a simple and safe process. I recommended
                 using the HHO carbon cleaner to do carbon cleaning service as
                 part of your vehicle’s regular maintenance schedule.
@@ -286,9 +286,8 @@ const CarouselTwo = () => {
               <p>
                 Every vehicle needs a little of update to maintain it's best
                 performance. My various services let you not to be afraid before
-                choosing a longer distance to drive with your car. I do small
-                and big repairs as well as cosmetic upgrades for your belowed
-                vehicle.
+                choosing a longer distance to drive your car. I do small and big
+                repairs as well as cosmetic upgrades for your belowed vehicle.
               </p>
               <NavLink exact to="/services/tinting">
                 <Button innerText="Read more" />

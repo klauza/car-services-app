@@ -29,6 +29,7 @@ const BigScreenNav = styled.div`
       align-items: center;
       margin: 5px;
       span {
+        cursor: default;
         margin-left: 10px;
       }
       img {

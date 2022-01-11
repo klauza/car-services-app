@@ -181,7 +181,7 @@ const Booking = () => {
           <div className="grid-2">
             <div className="input-box input-radio-parent">
               <label htmlFor="location1">
-                My Location
+                My location
                 <input
                   checked={newBooking.location === 'my_location' ? true : ''}
                   type="radio"
