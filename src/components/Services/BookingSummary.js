@@ -21,6 +21,10 @@ const Container = styled(WrapperContainer)`
   display: grid;
   place-items: center;
   height: 80vh;
+  h1 {
+    text-align: center;
+    padding: 0 7.5px;
+  }
 `;
 
 const BookingSummary = () => {

@@ -47,7 +47,7 @@ const Wrapper = styled.div`
     }
   }
   .right{
-    background: orange;
+    background: #969b00;
     &__image{
       width: 100%;
       height: 100%;

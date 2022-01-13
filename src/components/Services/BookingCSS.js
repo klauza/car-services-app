@@ -28,6 +28,7 @@ export const BookingWrapper = styled(PosedBookingWrapper)`
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
     transition: 250ms all ease;
+
     .grid-1 {
       display: flex;
       flex-direction: row;
@@ -92,6 +93,23 @@ export const BookingWrapper = styled(PosedBookingWrapper)`
   .error-field {
     text-align: center;
     color: red;
+  }
+
+  @media (max-width: 570px) {
+    .grid {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 1fr 1fr;
+      margin: 10px 0;
+
+      .grid-1,
+      .grid-2 {
+        justify-content: center;
+        margin: 7.5px 0;
+      }
+      .grid-2 {
+        border-bottom: 1px solid #fff;
+      }
+    }
   }
 `;
 // PAY
