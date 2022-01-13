@@ -68,9 +68,9 @@ const HowItWorks = () => {
       <div className="about-container">
         <h1>About us</h1>
         <p>
-          My business was created for daily drivers who value a reliable car.
-          Thanks to my skillset and strong craving to offer help, your demands
-          may come true.
+          Our business was created for daily drivers who value a reliable car.
+          Thanks to our knowledge, skillset and strong eagerness to help, you
+          will be a happy customer.
         </p>
 
         <h3>Our traits</h3>
